@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --text: #fff;
+    --background: #00171a;
+    --primary: #ed8326;
+    --secondary: #10282d;
+    --secondary-40: rgba(16, 40, 45, 0.4);
+    --accent: #00c3ff;
+    --accent-alternative: #00c2ff;
+    --company-bg: url(/assets/images/bg_company.webp);
+    --company-secondary: #552700;
+    --call-to-action: #606c38;
+    --topbar: #693514;
+    background-image: url(/assets/images/bg.webp);
+    background-size: cover;
+    background-position: center;
+    color: var(--text);
+    font-family: Inter, sans-serif;
+    font-feature-settings:
+      "liga" 1,
+      "calt" 1,
+      "cv02" 1,
+      "cv05" 1;
+  }
+
+  @supports (font-variation-settings: normal) {
+    :root {
+      font-family: InterVariable, sans-serif;
+    }
+  }
+
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  b,
+  div {
+    letter-spacing: -0.03em; /* -3% */
+  }
+
+  @media (max-width: 768px) {
+    :root {
+      background-size: contain;
+      background-repeat: repeat-y;
+    }
+
+    .dark {
+      background-size: contain;
+      background-repeat: repeat-y;
+    }
+  }
+
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+/* this is a css extension that only works in gecko engine based browsers (firefox) */
+@-moz-document url-prefix() {
+  .firefox-scrollbar-margin {
+    padding-right: 4px;
+  }
+}
