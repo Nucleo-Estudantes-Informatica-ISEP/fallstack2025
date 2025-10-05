@@ -9,102 +9,97 @@ datasource db {
 }
 
 model User {
-  id                  String               @id @default(auto()) @map("_id") @db.ObjectId
-  email               String               @unique
-  password            String
-  createdAt           DateTime             @default(now())
-  updatedAt           DateTime             @updatedAt
-  role                Role                 @default(STUDENT)
-  isAdmin             Boolean              @default(false)
-  savedStudents       SavedStudent[]
-  passwordResetTokens PasswordResetToken[]
+  id       String   @id @default(uuid()) @db.Uuid
+  role     Role     @default(STUDENT)
+  isAdmin  Boolean  @default(false)
+  updatedAt DateTime @default(now())
 
   student   Student?
   company   Company?
-  interests Interest[] @relation(fields: [interestId], references: [id])
+  interests UserInterest[]
+}
 
-  interestId String[] @db.ObjectId
+model Student {
+  id       String   @id @default(uuid())
+  user     User     @relation(fields: [userId], references: [id])
+  userId   String   @unique @db.Uuid
+
+  code     String   @unique
+  name     String
+  bio      String?
+  year     String
+  cv       String?
+  linkedin String?
+  github   String?
+  avatar   String?
+
+  actionCompletions ActionCompletion[]
+  savedByCompanies  SavedStudent[]
+}
+
+model Company {
+  id       String   @id @default(uuid())
+  user     User     @relation(fields: [userId], references: [id])
+  userId   String   @unique @db.Uuid
+
+  name     String   @unique
+  tier     Tier
+  avatar   String?
+
+  savedStudents SavedStudent[]
 }
 
 model Action {
-  id          String  @id @default(auto()) @map("_id") @db.ObjectId
-  name        String  @unique
+  id          String   @id @default(uuid())
+  name        String   @unique
   description String
   points      Int
   altText     String?
-  isLive      Boolean @default(false)
-  isVisible   Boolean @default(true)
+  isLive      Boolean  @default(false)
+  isVisible   Boolean  @default(true)
 
-  ActionCompletion ActionCompletion[]
+  actionCompletions ActionCompletion[]
 }
 
 model ActionCompletion {
-  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  id          String   @id @default(uuid())
   completedAt DateTime @default(now())
 
-  action  Action  @relation(fields: [actionId], references: [id])
-  Student Student @relation(fields: [studentCode], references: [code])
+  action       Action   @relation(fields: [actionId], references: [id])
+  student      Student  @relation(fields: [studentCode], references: [code])
 
-  actionId    String @db.ObjectId
-  studentCode String
+  actionId     String
+  studentCode  String
 
   @@unique([actionId, studentCode])
 }
 
-model Student {
-  id       String         @id @default(auto()) @map("_id") @db.ObjectId
-  user     User           @relation(fields: [userId], references: [id])
-  code     String         @unique
-  name     String
-  bio      String?        @db.String
-  year     String
-  saves    SavedStudent[]
-  cv       String?
-  linkedin String?
-  github   String?
-  avatar   String?        @map("image")
-
-  userId String @unique @db.ObjectId
-
-  ActionCompletion ActionCompletion[]
-}
-
-model Company {
-  id     String  @id @default(auto()) @map("_id") @db.ObjectId
-  user   User    @relation(fields: [userId], references: [id])
-  name   String  @unique
-  tier   Tier
-  avatar String? @map("image")
-
-  userId String @unique @db.ObjectId
-}
-
 model Interest {
-  id   String @id @default(auto()) @map("_id") @db.ObjectId
-  name String @unique
+  id     String  @id @default(uuid()) @db.Uuid
+  name   String  @unique
 
-  UserIds String[] @db.ObjectId
-  Users   User[]   @relation(fields: [UserIds], references: [id])
+  users  UserInterest[]
+}
+
+model UserInterest {
+  user       User     @relation(fields: [userId], references: [id])
+  interest   Interest @relation(fields: [interestId], references: [id])
+
+  userId     String @db.Uuid
+  interestId String @db.Uuid
+
+  @@id([userId, interestId])
 }
 
 model SavedStudent {
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  id        String   @id @default(uuid())
   student   Student  @relation(fields: [studentId], references: [id])
-  savedBy   User     @relation(fields: [savedById], references: [id])
+  savedBy   Company  @relation(fields: [savedById], references: [id])
   isSaved   Boolean  @default(false)
   createdAt DateTime @default(now())
 
-  studentId String @db.ObjectId
-  savedById String @db.ObjectId
-}
-
-model PasswordResetToken {
-  id    String @id @default(auto()) @map("_id") @db.ObjectId
-  token String @unique
-
-  user User @relation(fields: [userId], references: [id])
-
-  userId String @db.ObjectId
+  studentId String
+  savedById String
 }
 
 enum Role {
