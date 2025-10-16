@@ -28,7 +28,7 @@ const TopBar: React.FC = () => {
       <div className="absolute right-4 top-2 flex h-12 w-full items-center justify-between space-x-4 px-4 py-2">
         <Link href="/" className="ml-6">
           <Image
-            src={"/assets/images/logo_white.png"}
+            src={"/assets/images/logo_white.svg"}
             alt="Fallstack"
             width={32}
             height={32}
