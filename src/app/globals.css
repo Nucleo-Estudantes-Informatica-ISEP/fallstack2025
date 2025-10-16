@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('/assets/fonts/coolvetica.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   :root {
     --text: #fff;
@@ -15,7 +23,7 @@
     --company-secondary: #552700;
     --call-to-action: #606c38;
     --topbar: #693514;
-    background-image: url(/assets/images/bg.webp);
+    background-image: url(/assets/images/bg.svg);
     background-size: cover;
     background-position: center;
     color: var(--text);
@@ -33,13 +41,16 @@
     }
   }
 
-  body,
   h1,
   h2,
   h3,
   h4,
   h5,
-  h6,
+  h6 {
+    font-family: Coolvetica, sans-serif;
+  }
+
+  body,
   p,
   b,
   div {

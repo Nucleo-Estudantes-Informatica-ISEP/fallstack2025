@@ -11,7 +11,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ["Inter", "sans-serif"],
+        title: ["Coolvetica", "sans-serif"],
       },
       backgroundImage: {
         company: "var(--company-bg)",
