@@ -65,12 +65,12 @@ const Hero: FunctionComponent<HeaderProps> = ({
           </a>
         </motion.div>
       </motion.div>
-      <a
-        className="absolute bottom-6 flex animate-bounce cursor-pointer items-center justify-center text-center transition-all duration-200 hover:scale-105"
-        onClick={() => contentRef.current?.scrollIntoView()}
-      >
-        <ChevronDown className="size-6 fill-white text-white" />
-      </a>
+      <div className="flex h-72 w-full flex-col items-center justify-center gap-8 bg-black px-80! text-white md:px-14">
+        <p className="text-center text-4xl">
+          O evento que reúne empresas do setor informático está de volta para a
+          sua oitava edição no ISEP.
+        </p>
+      </div>
     </section>
   );
 };
