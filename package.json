@@ -64,7 +64,7 @@
     "framer-motion": "^10.16.4",
     "lodash": "^4.17.21",
     "postcss": "^8.4.49",
-    "prettier": "^3.3.3",
+    "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.7.1",
     "prisma": "^5.22.0",
     "react-easy-crop": "^5.1.0",
