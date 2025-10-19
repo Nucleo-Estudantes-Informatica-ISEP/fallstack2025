@@ -65,7 +65,7 @@
     "lodash": "^4.17.21",
     "postcss": "^8.4.49",
     "prettier": "^3.3.3",
-    "prettier-plugin-tailwindcss": "^0.5.14",
+    "prettier-plugin-tailwindcss": "^0.7.1",
     "prisma": "^5.22.0",
     "react-easy-crop": "^5.1.0",
     "react-toastify": "^9.1.3",
