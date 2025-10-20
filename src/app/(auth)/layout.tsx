@@ -6,17 +6,22 @@ interface AuthLayoutProps {
 
 const AuthLayout: React.FC<AuthLayoutProps> = ({ children }) => {
   return (
-    <div className="flex h-svh items-center justify-center px-6  md:p-0">
-      <div className="flex max-w-4xl flex-1 flex-col items-start justify-between rounded-xl bg-white shadow-xl md:h-168 md:flex-row">
-        <div className="relative h-60 w-full md:h-full">
-          <Image
-            src={"/assets/images/auth-component.jpg"}
-            fill
-            alt="Auth Header"
-            className="object-cover max-md:rounded-t-xl md:rounded-l-xl"
-          />
-        </div>
-        <div className="flex w-full items-start justify-center px-6 py-16 pb-32 md:px-12 md:py-16">
+    <div className="flex min-h-screen w-full flex-col md:flex-row">
+      {/* Left image - anchored to left/top/bottom, keeps specified aspect ratio on desktop */}
+      <div className="auth-left relative">
+        <Image
+          src={"/assets/images/auth-logo.jpg"}
+          alt="Auth Header"
+          fill
+          className="object-contain"
+          style={{ objectPosition: "left center" }}
+          priority
+        />
+      </div>
+
+      {/* Right pane - fills remaining space and holds auth content */}
+      <div className="auth-pane relative z-10 flex w-full items-center justify-center px-6 md:px-12">
+        <div className="flex h-[50vh] w-full flex-col justify-between">
           {children}
         </div>
       </div>

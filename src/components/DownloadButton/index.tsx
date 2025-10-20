@@ -19,7 +19,7 @@ const DownloadButton: React.FC<DownloadButtonProps> = ({ className }) => {
     setIsLoading(true);
     const res = await fetch(BASE_URL + "/export");
     const data = await res.blob();
-    download(data, "fallstack2023.csv", "text/csv");
+    download(data, "fallstack2025.csv", "text/csv");
     setIsLoading(false);
   };
 
@@ -27,7 +27,7 @@ const DownloadButton: React.FC<DownloadButtonProps> = ({ className }) => {
 
   return (
     <span
-      className={`cursor-pointer transition-colors hover:text-primary ${
+      className={`hover:text-primary cursor-pointer transition-colors ${
         isLoading && "text-primary"
       } ${className}`}
       onClick={handleDownload}
