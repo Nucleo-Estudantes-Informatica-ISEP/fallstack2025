@@ -47,9 +47,22 @@ const RequestResetPage: React.FC = () => {
 
   return (
     <section className="flex w-full flex-col md:mt-12">
-      <h2 className="mb-4 text-2xl font-semibold">Placeholder</h2>
+      <h2
+        className="mb-8 w-full text-white"
+        style={{
+          fontFamily: "Inter, sans-serif",
+          fontWeight: 600,
+          fontSize: "45px",
+        }}
+      >
+        Recuperar password
+      </h2>
 
-      <Input name="Email" inputRef={emailRef} />
+      <Input
+        name="Email"
+        inputRef={emailRef}
+        className="!rounded-none !border-[rgba(255,255,255,0.35)] bg-transparent px-3 py-3 text-black placeholder:text-gray-500"
+      />
 
       {error && (
         <motion.p
@@ -61,8 +74,12 @@ const RequestResetPage: React.FC = () => {
         </motion.p>
       )}
 
-      <PrimaryButton loading={loading} onClick={handleClick} className="mt-6">
-        Placeholder
+      <PrimaryButton
+        loading={loading}
+        onClick={handleClick}
+        className="mt-8 w-full cursor-pointer !rounded-none !px-3 py-4 !text-[19px] font-semibold !tracking-normal"
+      >
+        Enviar e-mail de recuperação
       </PrimaryButton>
     </section>
   );
