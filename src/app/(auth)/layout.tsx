@@ -21,7 +21,7 @@ const AuthLayout: React.FC<AuthLayoutProps> = ({ children }) => {
 
       {/* Right pane - fills remaining space and holds auth content */}
       <div className="auth-pane relative z-10 flex w-full items-center justify-center px-6 md:px-12">
-        <div className="flex h-[50vh] w-full flex-col justify-between">
+        <div className="flex h-[60vh] w-full flex-col justify-center gap-6">
           {children}
         </div>
       </div>
