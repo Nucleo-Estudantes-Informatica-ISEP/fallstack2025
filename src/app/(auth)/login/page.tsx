@@ -61,22 +61,27 @@ const LoginPage: React.FC = () => {
   };
 
   return (
-    <section className="flex w-full flex-col md:mt-12">
-      <div className="mb-5 flex justify-center">
-        <Image
-          src={"/assets/images/logo_dark.png"}
-          width={128}
-          height={128}
-          alt="Logo"
+    <section className="flex w-full flex-col md:mt-0">
+      <h1
+        className="mb-6 w-full text-white"
+        style={{
+          fontFamily: "Inter, sans-serif",
+          fontWeight: 600,
+          fontSize: "45px",
+        }}
+      >
+        Iniciar Sessão
+      </h1>
+
+      <div className="w-full">
+        <Input
+          name="Email"
+          inputRef={emailRef}
+          autoFocus={!!emailError}
+          onKeyUp={handleKeyUp}
+          className="!rounded-none !border-[rgba(255,255,255,0.35)] bg-transparent px-3 py-3 text-black placeholder:text-gray-500"
         />
       </div>
-      <Input
-        name="Email"
-        placeholder="Insere o teu email"
-        inputRef={emailRef}
-        autoFocus={!!emailError}
-        onKeyUp={handleKeyUp}
-      />
 
       {emailError && (
         <motion.p
@@ -95,14 +100,16 @@ const LoginPage: React.FC = () => {
 
       <span className="mt-4"></span>
 
-      <Input
-        name="Password"
-        placeholder="Insere a tua password"
-        type="password"
-        inputRef={passwordRef}
-        autoFocus={!!pwError}
-        onKeyUp={handleKeyUp}
-      />
+      <div className="mt-4 w-full">
+        <Input
+          name="A tua palavra-passe"
+          type="password"
+          inputRef={passwordRef}
+          autoFocus={!!pwError}
+          onKeyUp={handleKeyUp}
+          className="!rounded-none !border-[rgba(255,255,255,0.35)] bg-transparent px-3 py-3 text-black placeholder:text-gray-500"
+        />
+      </div>
 
       {pwError && (
         <motion.p
@@ -119,19 +126,36 @@ const LoginPage: React.FC = () => {
         </motion.p>
       )}
 
-      <PrimaryButton
-        loading={loading}
-        onClick={handleClick}
-        className="mb-5 mt-4 font-bold"
-      >
-        LOGIN
-      </PrimaryButton>
+      <div className="mt-2 w-full">
+        <div className="mb-10 w-full text-right">
+          <Link
+            href="/password-reset"
+            className="text-sm text-gray-400 underline"
+          >
+            Esqueci-me da palavra-passe
+          </Link>
+        </div>
 
-      <hr className="mb-4 border-secondary" />
+        <PrimaryButton
+          loading={loading}
+          onClick={handleClick}
+          className="w-full cursor-pointer !rounded-none !px-3 py-4 !text-[19px] font-semibold !tracking-normal"
+        >
+          Login
+        </PrimaryButton>
+      </div>
 
-      <Link href="/signup" className="text-sm text-black">
-        Ainda não tens uma conta?
-      </Link>
+      <div className="mt-8 w-full">
+        <div className="mb-4 text-center text-sm text-gray-400">
+          Ainda não tens uma conta?
+        </div>
+        <PrimaryButton
+          className="w-full cursor-pointer !rounded-none !px-3 py-4 !text-[19px] font-semibold !tracking-normal"
+          onClick={() => router.push("/signup")}
+        >
+          Criar uma conta
+        </PrimaryButton>
+      </div>
     </section>
   );
 };

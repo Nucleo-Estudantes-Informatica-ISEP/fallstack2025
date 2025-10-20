@@ -20,7 +20,7 @@ const InfoText: React.FC<InfoTextProps> = ({
 }) => {
   return (
     <>
-      <HeadingText className="text-3xl md:text-5xl" text="#FallStack2024" />
+      <HeadingText className="text-3xl md:text-5xl" text="#FallStack2025" />
       <div className="mb-24 flex flex-col text-xl lg:flex-row">
         <EventInfos
           days={days}
