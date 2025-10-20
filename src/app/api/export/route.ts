@@ -44,7 +44,7 @@ export async function GET() {
 
   return new NextResponse(data.join("\n"), {
     headers: {
-      "content-disposition": `attachment; filename="fallstack2023.csv"`,
+      "content-disposition": `attachment; filename="fallstack2025.csv"`,
       "content-type": "text/csv; charset=utf-8",
     },
   });
