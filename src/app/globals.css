@@ -1,6 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@layer utilities {
+  @font-face {
+    font-family: "Coolvetica";
+    src: url("/assets/fonts/coolvetica.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+}
 
 @font-face {
   font-family: 'Coolvetica';

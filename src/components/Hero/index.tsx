@@ -60,7 +60,7 @@ const Hero: FunctionComponent<HeaderProps> = ({
           </PrimaryLinkButton>
         </motion.div>
       </motion.div>
-      <div className="flex h-72 w-full flex-col items-center justify-center gap-8 bg-black !px-80 text-white md:px-14">
+      <div className="flex h-72 w-full flex-col items-center justify-center gap-8 bg-black px-80! text-white md:px-14">
         <p className="text-center text-4xl">
           O evento que reúne empresas do setor informático está de volta para a
           sua oitava edição no ISEP.
