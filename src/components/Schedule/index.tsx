@@ -37,7 +37,7 @@ const Schedule: React.FC<Props> = ({
       viewport={{ once: true }}
       className="container flex flex-col items-center justify-center"
     >
-      <HeadingText text="Horário" />
+      <HeadingText text="Programa do Evento" />
       <div className="container flex w-full flex-col items-center justify-center">
         <div className="relative flex w-full flex-col justify-center md:flex-row">
           <motion.div
@@ -84,7 +84,7 @@ const Schedule: React.FC<Props> = ({
               duration: 0.2,
               bounce: 0.5,
             }}
-            className="absolute left-0 top-0 -z-10 h-1/2 w-full bg-primary hover:brightness-110 md:h-full md:w-1/2"
+            className="bg-primary absolute top-0 left-0 -z-10 h-1/2 w-full hover:brightness-110 md:h-full md:w-1/2"
           ></motion.div>
           <motion.div
             animate={{
@@ -126,7 +126,7 @@ const Schedule: React.FC<Props> = ({
                       : 0,
             }}
             transition={{ duration: 0.1, stiffness: 500 }}
-            className="absolute left-0 top-0 -z-20 h-1/2 w-full bg-secondary hover:brightness-110 md:h-full md:w-1/2"
+            className="bg-secondary absolute top-0 left-0 -z-20 h-1/2 w-full hover:brightness-110 md:h-full md:w-1/2"
           ></motion.div>
           <button
             className="w-full rounded-t-lg px-4 py-2.5 hover:brightness-95 lg:rounded-l-lg lg:rounded-r-none"
@@ -135,8 +135,7 @@ const Schedule: React.FC<Props> = ({
             <span className="z-20">{firstDayTitle}</span>
           </button>
           <button
-            className="w-full rounded-b-lg px-4 py-2.5 transition-all duration-300
-                    hover:brightness-95 lg:rounded-l-none lg:rounded-r-lg"
+            className="w-full rounded-b-lg px-4 py-2.5 transition-all duration-300 hover:brightness-95 lg:rounded-l-none lg:rounded-r-lg"
             onClick={() => setActiveScheduleEventIndex(1)}
           >
             <span className="z-20">{secondDayTitle}</span>

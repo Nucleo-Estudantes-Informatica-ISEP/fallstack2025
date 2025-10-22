@@ -15,11 +15,11 @@ import {
   MdDownload as DownloadIcon,
   MdInstallDesktop as InstallPwaDesktop,
   MdInstallMobile as InstallPwaMobile,
+  MdWatch as Watch,
 } from "react-icons/md";
 
 import {
   BsAlarm as Alarm,
-  BsCalendarEvent as CalendarEvent,
   BsChevronDown as ChevronDown,
   BsFacebook as Facebook,
   BsGeoAlt as GeoAlt,
@@ -31,12 +31,17 @@ import {
   BsTwitter as Twitter,
   BsX as X,
   BsYoutube as Youtube,
+  BsQuestionCircleFill as QuestionCircle,
 } from "react-icons/bs";
+
+import { IoMdCalendar as Calendar } from "react-icons/io";
+
+import { PinSolid as Pin } from "@mynaui/icons-react";
 
 export {
   Alarm,
   Archive,
-  CalendarEvent,
+  Calendar,
   Chart,
   CheckSquare,
   ChevronDown,
@@ -53,12 +58,15 @@ export {
   InstallPwaMobile,
   Leaf,
   Linkedin,
+  Pin,
   LogIn,
   OpenCv,
   Pencil,
+  QuestionCircle,
   Square,
   Trophy,
   Twitter,
+  Watch,
   X,
   Youtube,
 };
