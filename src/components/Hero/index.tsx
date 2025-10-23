@@ -62,7 +62,7 @@ const Hero: FunctionComponent<HeaderProps> = ({
           </motion.div>
         </motion.div>
       </section>
-      <div className="bg-background flex h-72 w-full flex-col items-center justify-center gap-8 px-80! text-white md:px-14">
+      <div className="bg-background flex h-72 w-full flex-col items-center justify-center gap-8 px-80! md:px-14">
         <motion.p
           initial={{
             opacity: 0,

@@ -59,6 +59,7 @@
 
 @layer base {
   :root {
+    --text: #ffffff;
     background-image: url(/assets/images/bg.svg);
     background-size: cover;
     background-position: center;

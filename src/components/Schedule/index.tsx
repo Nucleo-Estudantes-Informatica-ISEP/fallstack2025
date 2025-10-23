@@ -159,7 +159,7 @@ const Schedule: React.FC<Props> = ({
             <span className="z-20 text-xl font-semibold">{secondDayTitle}</span>
           </button>
         </div>
-        <table className="mt-6 w-full table-auto border-collapse text-lg font-semibold text-white">
+        <table className="mt-6 w-full table-auto border-collapse text-lg font-semibold">
           <motion.tbody
             initial={{
               opacity: 0,
