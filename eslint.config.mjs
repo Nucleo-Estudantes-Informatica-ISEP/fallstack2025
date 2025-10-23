@@ -50,6 +50,7 @@ export default defineConfig([
       "react-hooks/rules-of-hooks": "warn",
       "tailwindcss/classnames-order": "warn",
       "@typescript-eslint/no-unused-vars": "warn",
+      "tailwindcss/no-custom-classname": "off",
     },
   },
 ]);

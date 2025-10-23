@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { QuestionCircle } from "@/styles/Icons";
 
 import EventInfos from "../EventInfos/index";
-import HeadingText from "../HeadingText";
 import PrimaryLinkButton from "../PrimaryLinkButton";
 
 interface InfoTextProps {

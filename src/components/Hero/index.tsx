@@ -19,7 +19,10 @@ const Hero: FunctionComponent<HeaderProps> = ({
 }) => {
   return (
     <>
-      <section className="relative flex size-full min-h-screen flex-col items-center justify-center">
+      <section
+        ref={contentRef}
+        className="relative flex size-full min-h-screen flex-col items-center justify-center"
+      >
         <motion.div
           initial={{
             opacity: 0,
@@ -59,7 +62,7 @@ const Hero: FunctionComponent<HeaderProps> = ({
           </motion.div>
         </motion.div>
       </section>
-      <div className="flex h-72 w-full flex-col items-center justify-center gap-8 bg-black px-80! text-white md:px-14">
+      <div className="bg-background flex h-72 w-full flex-col items-center justify-center gap-8 px-80! text-white md:px-14">
         <motion.p
           initial={{
             opacity: 0,

@@ -37,7 +37,15 @@ const Schedule: React.FC<Props> = ({
       viewport={{ once: true }}
       className="container flex flex-col items-center justify-center"
     >
-      <HeadingText text="Programa do Evento" />
+      <div className="flex w-full items-center justify-between">
+        <HeadingText
+          className="text-secondary !font-light"
+          text="Programa do evento"
+        />
+        <a href="#" className="text-secondary text-center text-lg underline">
+          Adicionar ao meu calendário
+        </a>
+      </div>
       <div className="container flex w-full flex-col items-center justify-center">
         <div className="relative flex w-full flex-col justify-center md:flex-row">
           <motion.div
@@ -129,26 +137,29 @@ const Schedule: React.FC<Props> = ({
             className="bg-secondary absolute top-0 left-0 -z-20 h-1/2 w-full hover:brightness-110 md:h-full md:w-1/2"
           ></motion.div>
           <button
-            className="w-full rounded-t-lg px-4 py-2.5 hover:brightness-95 lg:rounded-l-lg lg:rounded-r-none"
+            className={`w-full px-4 py-2.5 hover:brightness-95 ${
+              activeScheduleEventIndex === 0
+                ? "bg-white text-black opacity-70"
+                : "bg-transparent text-white"
+            }`}
             onClick={() => setActiveScheduleEventIndex(0)}
+            aria-pressed={activeScheduleEventIndex === 0}
           >
-            <span className="z-20">{firstDayTitle}</span>
+            <span className="z-20 text-xl font-semibold">{firstDayTitle}</span>
           </button>
           <button
-            className="w-full rounded-b-lg px-4 py-2.5 transition-all duration-300 hover:brightness-95 lg:rounded-l-none lg:rounded-r-lg"
+            className={`w-full px-4 py-2.5 transition-all duration-300 hover:brightness-95 ${
+              activeScheduleEventIndex === 1
+                ? "bg-white text-black opacity-70"
+                : "bg-transparent text-white"
+            }`}
             onClick={() => setActiveScheduleEventIndex(1)}
+            aria-pressed={activeScheduleEventIndex === 1}
           >
-            <span className="z-20">{secondDayTitle}</span>
+            <span className="z-20 text-xl font-semibold">{secondDayTitle}</span>
           </button>
         </div>
-        <table className="mt-6 w-full table-auto border-collapse text-lg">
-          <thead>
-            <tr className="border-b-2 border-gray-500">
-              <th className="w-1/3 p-4 text-left">Hora</th>
-              <th className="py-4 text-left">Atividade</th>
-            </tr>
-          </thead>
-
+        <table className="mt-6 w-full table-auto border-collapse text-lg font-semibold text-white">
           <motion.tbody
             initial={{
               opacity: 0,
@@ -161,7 +172,7 @@ const Schedule: React.FC<Props> = ({
           >
             {scheduleEvents[activeScheduleEventIndex].map((entry, index) => (
               <motion.tr
-                className="border-b-2 border-gray-500"
+                className={"flex gap-4 *:pl-8"}
                 key={index}
                 initial={{
                   opacity: 0,
@@ -171,20 +182,10 @@ const Schedule: React.FC<Props> = ({
                 viewport={{ once: true }}
                 transition={{ duration: 0.1 * index }}
               >
-                <td
-                  className={
-                    "p-4 " +
-                    (entry.activity == "Coffee Break" ? "font-semibold" : "")
-                  }
-                >
+                <td className={"border-secondary w-1/4 border p-4 text-center"}>
                   {entry.hour}
                 </td>
-                <td
-                  className={
-                    "py-4 pr-4 " +
-                    (entry.activity == "Coffee Break" ? "font-semibold" : "")
-                  }
-                >
+                <td className={"border-secondary w-full border py-4 pr-4"}>
                   {entry.activity}
                 </td>
               </motion.tr>

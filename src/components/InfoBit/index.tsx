@@ -7,7 +7,7 @@ interface InfoBitProps {
 
 const InfoBit: FunctionComponent<InfoBitProps> = ({ icon, info }) => {
   return (
-    <span className="flex items-center gap-x-3.5 lg:w-auto">
+    <span className="flex items-center gap-x-3.5 text-white lg:w-auto">
       <span className="!text-3xl">{icon}</span>
       <p className="w-[30ch]">{info}</p>
     </span>
