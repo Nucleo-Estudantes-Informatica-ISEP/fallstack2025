@@ -1,5 +1,5 @@
+// app/layout.tsx
 import type { Metadata } from "next";
-
 import "react-loading-skeleton/dist/skeleton.css";
 import "react-toastify/dist/ReactToastify.css";
 import "./globals.css";
@@ -14,10 +14,9 @@ import InstallPopUp from "@/components/InstallPopUp";
 import Topbar from "@/components/TopBar";
 
 export const metadata: Metadata = {
-  applicationName: "Fallstack 2024",
-  title: "Fallstack 2024",
-  description:
-    "Website do evento Fallstack 2024. O evento decorrerá nos dias 26 e 27 de novembro no Instituto Superior de Engenharia do Porto. O evento é organizado pelo Núcleo de Estudantes de Informática do ISEP (NEI-ISEP).",
+  applicationName: "Fallstack 2025",
+  title: "Fallstack 2025",
+  description: "Evento do Instituto Superior de Engenharia do Porto",
   manifest: "/manifest.json",
 };
 
