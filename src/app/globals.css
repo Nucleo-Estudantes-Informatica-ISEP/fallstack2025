@@ -69,6 +69,9 @@
   :root {
     scroll-behavior: smooth;
   }
+
+
+  
 }
 
 /* this is a css extension that only works in gecko engine based browsers (firefox) */
