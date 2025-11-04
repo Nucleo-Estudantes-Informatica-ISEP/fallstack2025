@@ -1,7 +1,9 @@
 import { ScheduleDays } from "../../utils/ScheduleDays";
 import CompaniesSection from "../Companies/CompaniesSection";
 import FaqSection from "../Faq/FaqSection";
+import HeadingText from "../HeadingText";
 import InfoText from "../InfoText";
+import PassSection from "../NewsSection";
 import Schedule from "../Schedule";
 import SponsorsSection from "../SponsorsSection";
 
@@ -35,7 +37,19 @@ const Content: React.FC<ContentProps> = ({ contentRef }) => {
         />
       </section>
 
-      <CompaniesSection />
+      <section className="mb-12 flex flex-col items-center text-center">
+        <HeadingText className="!font-normal" text="Speed Interviews" />
+        <p className="w-1/2 text-2xl">
+          Este ano podes experienciar a modalidade de speed interviews com
+          algumas das empresas presentes.
+        </p>
+      </section>
+
+      <section className="bg-background w-full">
+        <PassSection />
+
+        <CompaniesSection />
+      </section>
 
       <SponsorsSection />
 
