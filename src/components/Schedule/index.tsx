@@ -38,10 +38,7 @@ const Schedule: React.FC<Props> = ({
       className="container flex flex-col items-center justify-center"
     >
       <div className="flex w-full items-center justify-between">
-        <HeadingText
-          className="text-secondary !font-light"
-          text="Programa do evento"
-        />
+        <HeadingText className="text-secondary" text="Programa do evento" />
         <a href="#" className="text-secondary text-center text-lg underline">
           Adicionar ao meu calendário
         </a>

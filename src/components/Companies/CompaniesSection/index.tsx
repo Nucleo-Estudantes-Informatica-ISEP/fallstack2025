@@ -4,13 +4,11 @@ import { DiamondCompanies } from "@/utils/DiamondCompanies";
 import { GoldCompanies } from "@/utils/GoldCompanies";
 import { SilverCompanies } from "@/utils/SilverCompanies";
 
-import HeadingText from "../../HeadingText";
 import CompaniesContainer from "../CompaniesContainer";
 
 const CompaniesSection: FunctionComponent = () => {
   return (
-    <section className="flex flex-col items-center gap-y-10 text-center md:gap-y-16">
-      <HeadingText text="Empresas" />
+    <section className="border-y-secondary flex flex-col items-center border-y text-center">
       <CompaniesContainer companies={DiamondCompanies} tier="diamond" />
       <CompaniesContainer companies={GoldCompanies} tier="gold" />
       <CompaniesContainer companies={SilverCompanies} tier="silver" />

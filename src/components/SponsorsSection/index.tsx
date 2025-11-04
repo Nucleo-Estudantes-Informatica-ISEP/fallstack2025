@@ -4,13 +4,13 @@ import { Sponsors } from "../../utils/Sponsors";
 import HeadingText from "../HeadingText";
 import SponsorsContainer from "../SponsorsContainer";
 
-const CompaniesSection: FunctionComponent = () => {
+const SponsorsSection: FunctionComponent = () => {
   return (
-    <section className="flex flex-col items-center gap-y-10 text-center md:gap-y-16">
-      <HeadingText className={"text-3xl md:text-5xl"} text="Agradecimentos" />
+    <section className="bg-background flex flex-col items-center gap-y-10 text-center md:gap-y-16">
+      <HeadingText className="!text-secondary !mb-0" text="Agradecimentos" />
       <SponsorsContainer sponsors={Sponsors} />
     </section>
   );
 };
 
-export default CompaniesSection;
+export default SponsorsSection;

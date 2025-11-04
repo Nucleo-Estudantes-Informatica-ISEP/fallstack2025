@@ -16,7 +16,7 @@ const Content: React.FC<ContentProps> = ({ contentRef }) => {
     <>
       <section
         ref={contentRef}
-        className="container mx-auto rounded-lg p-8 sm:w-3/4 lg:w-full lg:pt-14"
+        className="w-full bg-[url('/assets/images/bgDates.svg')] bg-cover bg-center bg-no-repeat p-8 pt-14"
       >
         <InfoText
           days={[25, 26]}
@@ -37,7 +37,7 @@ const Content: React.FC<ContentProps> = ({ contentRef }) => {
         />
       </section>
 
-      <section className="mb-12 flex flex-col items-center text-center">
+      <section className="flex w-full flex-col items-center bg-[url('/assets/images/bgInterview.svg')] bg-cover bg-center bg-no-repeat pb-12 text-center">
         <HeadingText className="!font-normal" text="Speed Interviews" />
         <p className="w-1/2 text-2xl">
           Este ano podes experienciar a modalidade de speed interviews com

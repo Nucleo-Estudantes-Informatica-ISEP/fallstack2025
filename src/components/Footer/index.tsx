@@ -25,10 +25,10 @@ const Footer: FunctionComponent<FooterProps> = ({
   const NEI_WEBSITE_URL = "https://nei-isep.org";
 
   return (
-    <footer className="w-full text-center">
+    <footer className="bg-background w-full text-center">
       <div className="flex justify-center drop-shadow-lg hover:drop-shadow-xl lg:m-8">
         <a href={lastEditionUrl} target="_blank" rel="noreferrer">
-          <div className="my-6 rounded-2xl bg-secondary/40 px-8 py-4  text-2xl font-bold transition-all duration-300 hover:scale-105 lg:text-4xl">
+          <div className="bg-secondary/40 my-6 rounded-2xl px-8 py-4 text-2xl font-bold transition-all duration-300 hover:scale-105 lg:text-4xl">
             Edição Anterior
           </div>
         </a>
@@ -46,10 +46,10 @@ const Footer: FunctionComponent<FooterProps> = ({
         </div>
       </div>
       <div className="pt-2">
-        <hr className="mx-auto my-4 h-1 w-11/12 border-0 bg-text"></hr>
+        <hr className="bg-text mx-auto my-4 h-1 w-11/12 border-0"></hr>
       </div>
       <div className="justify-between lg:flex lg:pb-6">
-        <h4 className="right-10 select-none pb-3 font-light drop-shadow-xl sm:text-center lg:pb-0 lg:pl-20">
+        <h4 className="right-10 pb-3 font-light drop-shadow-xl select-none sm:text-center lg:pb-0 lg:pl-20">
           Copyright &copy; {currentYear} NEI-ISEP. All rights reserved.
         </h4>
         <div className="mb-8 flex justify-between px-5 md:items-center md:gap-x-5 md:px-0 lg:pr-20">

@@ -1,20 +1,15 @@
 import Link from "next/link";
 
+import HeadingText from "../HeadingText";
+
 const HeadsUp: React.FC = () => {
   return (
     <section className="my-12">
-      <h1 className="text-center text-xl font-bold sm:text-2xl md:text-3xl">
-        Precisas de <span className="text-primary">ajuda</span>? Contacta-nos!
-      </h1>
+      <HeadingText className="!mb-0 !text-8xl" text="Precisas de ajuda?" />
 
-      <p className="my-2 text-center text-lg font-light">
+      <p className="my-2 text-center text-2xl font-light">
         Envia-nos um email para{" "}
-        <Link
-          href="mailto:support@nei-isep.org"
-          className="font-bold text-primary"
-        >
-          support@nei-isep.org
-        </Link>
+        <Link href="mailto:support@nei-isep.org">support@nei-isep.org</Link>
       </p>
     </section>
   );

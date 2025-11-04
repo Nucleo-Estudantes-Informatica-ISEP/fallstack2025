@@ -14,7 +14,7 @@ const CompaniesContainer: FunctionComponent<CompaniesContainerProps> = ({
   companies,
 }) => {
   return (
-    <motion.div className="flex flex-col items-center justify-center">
+    <motion.div className="border-y-secondary flex flex-col items-center justify-center border-y py-12">
       <h2 className="z-0 mx-2 mb-8 text-center text-5xl lg:mb-4">
         <span className={`${getTierStyling(tier)}`}>
           <span className="text-secondary">Parceiros</span> {tier}
