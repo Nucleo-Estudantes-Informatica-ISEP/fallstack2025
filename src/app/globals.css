@@ -94,18 +94,6 @@
     letter-spacing: -0.03em; /* -3% */
   }
 
-  @media (max-width: 768px) {
-    :root {
-      background-size: contain;
-      background-repeat: repeat-y;
-    }
-
-    .dark {
-      background-size: contain;
-      background-repeat: repeat-y;
-    }
-  }
-
   :root {
     scroll-behavior: smooth;
   }

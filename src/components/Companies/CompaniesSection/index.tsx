@@ -11,9 +11,9 @@ const CompaniesSection: FunctionComponent = () => {
   return (
     <section className="flex flex-col items-center gap-y-10 text-center md:gap-y-16">
       <HeadingText text="Empresas" />
-      <CompaniesContainer companies={DiamondCompanies} tier="Diamond" />
-      <CompaniesContainer companies={GoldCompanies} tier="Gold" />
-      <CompaniesContainer companies={SilverCompanies} tier="Silver" />
+      <CompaniesContainer companies={DiamondCompanies} tier="diamond" />
+      <CompaniesContainer companies={GoldCompanies} tier="gold" />
+      <CompaniesContainer companies={SilverCompanies} tier="silver" />
     </section>
   );
 };
