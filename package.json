@@ -58,7 +58,7 @@
     "@types/react-dom": "^18.3.7",
     "@types/uuid": "^11.0.0",
     "@typescript-eslint/eslint-plugin": "^8.46.1",
-    "@typescript-eslint/parser": "^8.46.1",
+    "@typescript-eslint/parser": "^8.46.2",
     "autoprefixer": "^10.4.21",
     "downloadjs": "^1.4.7",
     "eslint": "^9.38.0",
