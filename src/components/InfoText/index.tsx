@@ -35,7 +35,7 @@ const InfoText: React.FC<InfoTextProps> = ({
       viewport={{
         once: true,
       }}
-      className="flex flex-col items-center text-xl lg:flex-row lg:justify-between lg:px-20"
+      className="flex flex-col items-center gap-6 text-center text-base sm:text-lg md:px-8 lg:flex-row lg:items-center lg:justify-between lg:text-left lg:text-xl"
     >
       <EventInfos
         days={days}
@@ -48,7 +48,7 @@ const InfoText: React.FC<InfoTextProps> = ({
       <PrimaryLinkButton
         loading={false}
         href="/location"
-        className="gap-2 !px-2 !py-3 font-semibold lg:mt-0 lg:self-center"
+        className="w-full max-w-xs justify-center gap-2 !px-4 !py-3 text-base font-semibold sm:text-lg lg:mt-0 lg:max-w-none lg:self-center"
       >
         <QuestionCircle /> Como chegar?
       </PrimaryLinkButton>

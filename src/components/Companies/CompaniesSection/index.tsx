@@ -8,7 +8,7 @@ import CompaniesContainer from "../CompaniesContainer";
 
 const CompaniesSection: FunctionComponent = () => {
   return (
-    <section className="border-y-secondary flex flex-col items-center border-y text-center">
+    <section className="*:border-y-secondary !last:border-b-0 !first:border-t-0 flex w-full flex-col text-center *:border-y *:px-10 sm:*:px-42">
       <CompaniesContainer companies={DiamondCompanies} tier="diamond" />
       <CompaniesContainer companies={GoldCompanies} tier="gold" />
       <CompaniesContainer companies={SilverCompanies} tier="silver" />

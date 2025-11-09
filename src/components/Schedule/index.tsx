@@ -37,9 +37,12 @@ const Schedule: React.FC<Props> = ({
       viewport={{ once: true }}
       className="container flex flex-col items-center justify-center"
     >
-      <div className="flex w-full items-center justify-between">
+      <div className="flex w-full flex-col items-center justify-between gap-4 text-center md:flex-row md:text-left">
         <HeadingText className="text-secondary" text="Programa do evento" />
-        <a href="#" className="text-secondary text-center text-lg underline">
+        <a
+          href="#"
+          className="text-secondary mb-4 text-base underline md:mb-0 md:text-lg"
+        >
           Adicionar ao meu calendário
         </a>
       </div>
@@ -156,7 +159,7 @@ const Schedule: React.FC<Props> = ({
             <span className="z-20 text-xl font-semibold">{secondDayTitle}</span>
           </button>
         </div>
-        <table className="mt-6 w-full table-auto border-collapse text-lg font-semibold">
+        <table className="mt-6 w-full table-auto text-sm font-semibold sm:text-base md:text-lg">
           <motion.tbody
             initial={{
               opacity: 0,
@@ -166,10 +169,10 @@ const Schedule: React.FC<Props> = ({
             viewport={{ once: true }}
             transition={{ duration: 0.2 }}
             key={activeScheduleEventIndex}
+            className={"w-full sm:flex sm:flex-col sm:gap-4"}
           >
             {scheduleEvents[activeScheduleEventIndex].map((entry, index) => (
               <motion.tr
-                className={"flex gap-4 *:pl-8"}
                 key={index}
                 initial={{
                   opacity: 0,
@@ -178,11 +181,12 @@ const Schedule: React.FC<Props> = ({
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.1 * index }}
+                className={"w-full sm:flex sm:gap-4"}
               >
-                <td className={"border-secondary w-1/4 border p-4 text-center"}>
+                <td className="border-secondary w-1/4 border py-4 text-center align-middle text-base font-semibold sm:px-4 sm:text-lg">
                   {entry.hour}
                 </td>
-                <td className={"border-secondary w-full border py-4 pr-4"}>
+                <td className="border-secondary w-3/4 border py-4 text-center align-middle text-sm font-normal sm:px-4 sm:text-left sm:text-base">
                   {entry.activity}
                 </td>
               </motion.tr>

@@ -7,7 +7,7 @@ import FaqContainer from "../FaqContainer";
 
 const FaqSection: FunctionComponent = () => {
   return (
-    <section className="bg-background border-y-secondary w-full border-y px-40 pb-20">
+    <section className="bg-background w-full pb-16">
       <div className="mx-auto flex w-full flex-col gap-10">
         <HeadingText
           text="FAQs"

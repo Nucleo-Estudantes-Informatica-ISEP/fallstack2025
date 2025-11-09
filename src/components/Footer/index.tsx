@@ -21,9 +21,9 @@ const Footer: FunctionComponent<FooterProps> = ({ neiLogoSrc }) => {
   const NEI_WEBSITE_URL = "https://nei-isep.org";
 
   return (
-    <footer className="bg-background flex w-full flex-col items-center pt-16 text-center">
-      <div className="flex w-full items-center justify-around lg:m-8">
-        <div className="mx-8 my-4 max-h-[200px] max-w-[200px] transition-all duration-300 hover:scale-105 sm:max-w-[275px] lg:max-w-[350px]">
+    <footer className="bg-background flex w-full flex-col items-center gap-10 px-6 pt-12 text-center">
+      <div className="flex w-full flex-col items-center gap-8 lg:flex-row lg:items-center lg:justify-around">
+        <div className="max-h-[200px] max-w-[220px] transition-all duration-300 hover:scale-105 sm:max-w-[275px] lg:max-w-[320px]">
           <a href={NEI_WEBSITE_URL} target="_blank" rel="noreferrer">
             <Image
               className="mx-auto block h-auto max-w-full drop-shadow-xl transition-all duration-300 hover:drop-shadow-2xl"
@@ -32,7 +32,7 @@ const Footer: FunctionComponent<FooterProps> = ({ neiLogoSrc }) => {
             />
           </a>
         </div>
-        <div className="flex justify-between px-5 md:items-center md:gap-x-5 md:px-0 lg:pr-20">
+        <div className="flex w-full flex-col items-center gap-6 md:flex-row md:justify-center lg:w-auto lg:items-center">
           <div className="flex gap-5">
             <Link
               className="text-xl drop-shadow-xl transition-all duration-300 hover:scale-110 hover:drop-shadow-2xl"
@@ -71,7 +71,7 @@ const Footer: FunctionComponent<FooterProps> = ({ neiLogoSrc }) => {
               <RiTwitterXFill color="text" size={45} />
             </Link>
           </div>
-          <div className="right-0 flex gap-5">
+          <div className="flex flex-wrap items-center justify-center gap-5">
             <InstallButton />
             <Link
               href="/privacy-policy"
@@ -90,8 +90,8 @@ const Footer: FunctionComponent<FooterProps> = ({ neiLogoSrc }) => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center lg:pb-6">
-        <p className="text-secondary right-10 pb-3 text-sm !font-normal select-none sm:text-center lg:pb-0 lg:pl-20">
+      <div className="flex w-full justify-center pb-6">
+        <p className="select-none text-sm !font-normal text-secondary sm:text-base">
           Copyright &copy; {currentYear} NEI-ISEP. All rights reserved.
         </p>
       </div>

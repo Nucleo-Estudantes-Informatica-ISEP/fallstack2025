@@ -3,7 +3,7 @@ import CompaniesSection from "../Companies/CompaniesSection";
 import FaqSection from "../Faq/FaqSection";
 import HeadingText from "../HeadingText";
 import InfoText from "../InfoText";
-import PassSection from "../NewsSection";
+import PassSection from "../PassSection";
 import Schedule from "../Schedule";
 import SponsorsSection from "../SponsorsSection";
 
@@ -16,7 +16,7 @@ const Content: React.FC<ContentProps> = ({ contentRef }) => {
     <>
       <section
         ref={contentRef}
-        className="w-full bg-[url('/assets/images/bgDates.svg')] bg-cover bg-center bg-no-repeat p-8 pt-14"
+        className="w-full bg-[url('/assets/images/bgDates.svg')] bg-cover bg-center bg-no-repeat pt-14 pb-12"
       >
         <InfoText
           days={[25, 26]}
@@ -28,7 +28,7 @@ const Content: React.FC<ContentProps> = ({ contentRef }) => {
       </section>
       <section
         ref={contentRef}
-        className="bg-background flex flex-col items-center px-8 pb-20 sm:w-3/4 lg:w-full"
+        className="bg-background flex flex-col items-center pb-20"
       >
         <Schedule
           firstDayTitle="25 de Novembro"
@@ -39,15 +39,17 @@ const Content: React.FC<ContentProps> = ({ contentRef }) => {
 
       <section className="flex w-full flex-col items-center bg-[url('/assets/images/bgInterview.svg')] bg-cover bg-center bg-no-repeat pb-12 text-center">
         <HeadingText className="!font-normal" text="Speed Interviews" />
-        <p className="w-1/2 text-2xl">
+        <p className="w-full max-w-2xl text-lg leading-relaxed text-balance sm:text-xl">
           Este ano podes experienciar a modalidade de speed interviews com
           algumas das empresas presentes.
         </p>
       </section>
 
-      <section className="bg-background w-full">
+      <section className="bg-background w-full !px-0">
         <PassSection />
+      </section>
 
+      <section className="bg-background w-full !px-0">
         <CompaniesSection />
       </section>
 

@@ -21,7 +21,7 @@ const Hero: FunctionComponent<HeaderProps> = ({
     <>
       <section
         ref={contentRef}
-        className="relative flex size-full min-h-screen flex-col items-center justify-center bg-[url('/assets/images/bgHero.svg')] bg-cover bg-center bg-no-repeat px-5 text-center"
+        className="relative flex size-full min-h-screen flex-col items-center justify-center bg-[url('/assets/images/bgHero.svg')] bg-cover bg-center bg-no-repeat text-center"
       >
         <motion.div
           initial={{
@@ -62,7 +62,7 @@ const Hero: FunctionComponent<HeaderProps> = ({
           </motion.div>
         </motion.div>
       </section>
-      <div className="bg-background flex h-72 w-full flex-col items-center justify-center gap-8 px-80! md:px-14">
+      <div className="bg-background flex w-full flex-col items-center justify-center gap-6 py-16 text-center">
         <motion.p
           initial={{
             opacity: 0,
@@ -75,7 +75,7 @@ const Hero: FunctionComponent<HeaderProps> = ({
           viewport={{
             once: true,
           }}
-          className="text-center text-4xl"
+          className="text-2xl leading-tight text-balance text-white md:text-3xl lg:text-4xl"
         >
           O evento que reúne empresas do setor informático está de volta para a
           sua oitava edição no ISEP.
