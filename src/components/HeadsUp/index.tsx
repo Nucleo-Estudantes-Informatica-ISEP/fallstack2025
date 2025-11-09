@@ -4,7 +4,7 @@ import HeadingText from "../HeadingText";
 
 const HeadsUp: React.FC = () => {
   return (
-    <section className="my-12">
+    <section className="bg-[url('/assets/images/bgHeadsUp.svg')] bg-cover bg-center bg-no-repeat py-40">
       <HeadingText className="!mb-0 !text-8xl" text="Precisas de ajuda?" />
 
       <p className="my-2 text-center text-2xl font-light">

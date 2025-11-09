@@ -13,19 +13,15 @@ import {
 import InstallButton from "../InstallButton";
 
 interface FooterProps {
-  lastEditionUrl: string;
   neiLogoSrc: StaticImageData;
 }
 
-const Footer: FunctionComponent<FooterProps> = ({
-  lastEditionUrl,
-  neiLogoSrc,
-}) => {
+const Footer: FunctionComponent<FooterProps> = ({ neiLogoSrc }) => {
   const currentYear = new Date().getFullYear();
   const NEI_WEBSITE_URL = "https://nei-isep.org";
 
   return (
-    <footer className="bg-background flex w-full flex-col items-center text-center">
+    <footer className="bg-background flex w-full flex-col items-center pt-16 text-center">
       <div className="flex w-full items-center justify-around lg:m-8">
         <div className="mx-8 my-4 max-h-[200px] max-w-[200px] transition-all duration-300 hover:scale-105 sm:max-w-[275px] lg:max-w-[350px]">
           <a href={NEI_WEBSITE_URL} target="_blank" rel="noreferrer">
