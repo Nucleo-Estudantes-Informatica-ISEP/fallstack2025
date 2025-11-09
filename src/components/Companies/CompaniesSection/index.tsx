@@ -12,6 +12,7 @@ const CompaniesSection: FunctionComponent = () => {
       <CompaniesContainer companies={DiamondCompanies} tier="diamond" />
       <CompaniesContainer companies={GoldCompanies} tier="gold" />
       <CompaniesContainer companies={SilverCompanies} tier="silver" />
+      <CompaniesContainer companies={SilverCompanies} tier="bronze" />
     </section>
   );
 };

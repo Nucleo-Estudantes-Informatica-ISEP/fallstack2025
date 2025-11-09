@@ -1,4 +1,4 @@
-export type CompaniesTier = "diamond" | "gold" | "silver";
+export type CompaniesTier = "diamond" | "gold" | "silver" | "bronze";
 
 export const getTierStyling = (tier: CompaniesTier): string => {
   switch (tier) {
@@ -8,6 +8,8 @@ export const getTierStyling = (tier: CompaniesTier): string => {
       return `text-transparent bg-clip-text bg-gradient-to-r from-[#FF9D00] from-13% to-[#8E8900] to-89%`;
     case "silver":
       return `text-transparent bg-clip-text bg-gradient-to-r from-[#484848] from-13% to-[#FFFFFF] to-89%`;
+    case "bronze":
+      return `text-transparent bg-clip-text bg-gradient-to-r from-[#692100] from-13% to-[#E98800] to-89%`;
     default:
       throw new Error("Tier not found");
   }
