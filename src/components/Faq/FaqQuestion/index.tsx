@@ -1,6 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+
+import { Chevron } from "@/styles/Icons";
 
 export interface FaqProps {
   question: string;
@@ -8,26 +10,52 @@ export interface FaqProps {
   index: number;
 }
 
-const FaqQuestion: React.FC<FaqProps> = ({ question, answer, index }) => {
+interface FaqQuestionProps extends FaqProps {
+  isOpen: boolean;
+  onToggle: () => void;
+}
+
+const FaqQuestion: React.FC<FaqQuestionProps> = ({
+  question,
+  answer,
+  index,
+  isOpen,
+  onToggle,
+}) => {
   return (
     <motion.div
-      initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
-      whileInView={{
-        opacity: 1,
-        x: 0,
-      }}
-      viewport={{
-        once: true,
-      }}
-      transition={{ delay: index * 0.1 }}
-      className="mb-8 flex flex-col justify-center gap-y-4"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: Math.min(index * 0.05, 0.4) }}
+      className={`border-secondary border transition-colors duration-200`}
     >
-      <p className="pt-4 text-center text-xl font-bold leading-6 text-orange-600 md:text-left md:text-3xl">
-        {question}
-      </p>
-      <p className="text-justify text-lg font-light leading-7 md:text-2xl md:leading-9">
-        {answer}
-      </p>
+      <button
+        type="button"
+        onClick={onToggle}
+        className="focus-visible:outline-secondary flex w-full items-center justify-between gap-6 px-12 py-10 text-left text-lg font-semibold text-white transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2"
+      >
+        <span className="flex-1 text-2xl leading-tight md:text-4xl">
+          {question}
+        </span>
+        <Chevron isOpen={isOpen} />
+      </button>
+      <AnimatePresence initial={false}>
+        {isOpen && (
+          <motion.div
+            key="faq-answer"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="overflow-hidden"
+          >
+            <p className="px-6 pb-6 text-lg leading-relaxed text-white/90 md:text-xl">
+              {answer}
+            </p>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.div>
   );
 };

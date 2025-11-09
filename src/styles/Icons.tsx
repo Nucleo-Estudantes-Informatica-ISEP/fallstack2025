@@ -1,3 +1,4 @@
+import { PinSolid as Pin } from "@mynaui/icons-react";
 import {
   FaArchive as Archive,
   FaChartPie as Chart,
@@ -10,7 +11,7 @@ import {
 } from "react-icons/fa";
 import { FaRegSquare as Square } from "react-icons/fa6";
 import { HiPencilSquare as Pencil } from "react-icons/hi2";
-import { IoIosLogIn as LogIn } from "react-icons/io";
+import { IoMdCalendar as Calendar, IoIosLogIn as LogIn } from "react-icons/io";
 import {
   MdDownload as DownloadIcon,
   MdInstallDesktop as InstallPwaDesktop,
@@ -28,15 +29,21 @@ import {
   BsInstagram as Instagram,
   BsLinkedin as Linkedin,
   BsBoxArrowUpRight as OpenCv,
+  BsQuestionCircleFill as QuestionCircle,
   BsTwitter as Twitter,
   BsX as X,
   BsYoutube as Youtube,
-  BsQuestionCircleFill as QuestionCircle,
 } from "react-icons/bs";
 
-import { IoMdCalendar as Calendar } from "react-icons/io";
-
-import { PinSolid as Pin } from "@mynaui/icons-react";
+const Chevron: React.FC<{ isOpen: boolean }> = ({ isOpen }) => {
+  return (
+    <ChevronDown
+      className={`transition-transform duration-300 ${
+        isOpen ? "rotate-180" : "rotate-0"
+      } h-6 w-6 text-white md:h-8 md:w-8`}
+    />
+  );
+};
 
 export {
   Alarm,
@@ -45,6 +52,7 @@ export {
   Chart,
   CheckSquare,
   ChevronDown,
+  Chevron,
   Clipboard,
   DownloadIcon,
   Email,
