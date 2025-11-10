@@ -40,7 +40,7 @@ const Input: React.FC<InputProps> = ({
         id={name}
         placeholder={placeholder}
         ref={inputRef}
-        className={`focus:border-primary rounded-md border border-gray-400 px-3 py-2 text-black focus:ring-0 disabled:text-gray-600 ${className ?? ""}`}
+        className={`focus:border-primary rounded-md border border-gray-400 px-3 py-2 text-white focus:ring-0 disabled:text-gray-600 ${className ?? ""}`}
         {...rest}
       />
     </div>

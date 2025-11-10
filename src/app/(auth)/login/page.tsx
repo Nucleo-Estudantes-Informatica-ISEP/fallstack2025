@@ -79,7 +79,7 @@ const LoginPage: React.FC = () => {
           inputRef={emailRef}
           autoFocus={!!emailError}
           onKeyUp={handleKeyUp}
-          className="!rounded-none !border-[rgba(255,255,255,0.35)] bg-transparent px-3 py-3 text-black placeholder:text-gray-500"
+          className="!rounded-none !border-[rgba(255,255,255,0.35)] bg-transparent px-3 py-3 text-white placeholder:text-gray-500"
         />
       </div>
 
@@ -107,7 +107,7 @@ const LoginPage: React.FC = () => {
           inputRef={passwordRef}
           autoFocus={!!pwError}
           onKeyUp={handleKeyUp}
-          className="!rounded-none !border-[rgba(255,255,255,0.35)] bg-transparent px-3 py-3 text-black placeholder:text-gray-500"
+          className="!rounded-none !border-[rgba(255,255,255,0.35)] bg-transparent px-3 py-3 text-white placeholder:text-gray-500"
         />
       </div>
 
