@@ -43,7 +43,12 @@
       "@typescript-eslint/eslint-plugin": "^8.8.1",
       "@typescript-eslint/utils": "^8.8.1",
       "@typescript-eslint/type-utils": "^8.8.1"
-    }
+    },
+    "onlyBuiltDependencies": [
+      "@prisma/client",
+      "bcrypt",
+      "sharp"
+    ]
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
