@@ -6,6 +6,8 @@ import HeroContainer from "@/components/HeroContainer";
 
 import LogoWhite from "../../public/assets/images/logo_white.png";
 import NeiLogoWhite from "../../public/assets/images/logo-white.png";
+import NeiLogoSimplifiedWhite from "../../public/assets/images/logo-simplified-white.png";
+import NeiShortNameWhite from "../../public/assets/images/nei-short-name-white.png";
 import Content from "../components/Content";
 import Footer from "../components/Footer";
 import GenericContainer from "../components/GenericContainer";
@@ -27,7 +29,7 @@ const App: FunctionComponent = () => {
         <HeadsUp />
         <Footer
           lastEditionUrl="https://fallstack2023.nei-isep.org/"
-          neiLogoSrc={NeiLogoWhite}
+          neiSimplifiedLogo={NeiLogoSimplifiedWhite}
         />
       </GenericContainer>
     </HeroContainer>
