@@ -60,15 +60,11 @@ const LoginPage: React.FC = () => {
     if (e.key === "Enter") handleClick();
   };
 
-  return (
+  const form = (
     <section className="flex w-full flex-col md:mt-0">
       <h1
-        className="mb-6 w-full text-white"
-        style={{
-          fontFamily: "Inter, sans-serif",
-          fontWeight: 600,
-          fontSize: "45px",
-        }}
+        className="mb-6 w-full text-center text-[28px] font-semibold text-white md:text-left md:text-[45px]"
+        style={{ fontFamily: "Inter, sans-serif" }}
       >
         Iniciar Sessão
       </h1>
@@ -79,7 +75,7 @@ const LoginPage: React.FC = () => {
           inputRef={emailRef}
           autoFocus={!!emailError}
           onKeyUp={handleKeyUp}
-          className="!rounded-none !border-[rgba(255,255,255,0.35)] bg-transparent px-3 py-3 text-white placeholder:text-gray-500"
+          className="!rounded-none !border-[rgba(255,255,255,0.35)] bg-transparent px-3 py-2 text-white placeholder:text-gray-500 sm:py-3"
         />
       </div>
 
@@ -98,7 +94,7 @@ const LoginPage: React.FC = () => {
         </motion.p>
       )}
 
-      <span className="mt-4"></span>
+      <span className="mt-3"></span>
 
       <div className="mt-4 w-full">
         <Input
@@ -107,7 +103,7 @@ const LoginPage: React.FC = () => {
           inputRef={passwordRef}
           autoFocus={!!pwError}
           onKeyUp={handleKeyUp}
-          className="!rounded-none !border-[rgba(255,255,255,0.35)] bg-transparent px-3 py-3 text-white placeholder:text-gray-500"
+          className="!rounded-none !border-[rgba(255,255,255,0.35)] bg-transparent px-3 py-2 text-white placeholder:text-gray-500 sm:py-3"
         />
       </div>
 
@@ -127,7 +123,7 @@ const LoginPage: React.FC = () => {
       )}
 
       <div className="mt-2 w-full">
-        <div className="mb-10 w-full text-right">
+        <div className="mb-8 w-full text-right">
           <Link
             href="/password-reset"
             className="text-sm text-gray-400 underline"
@@ -139,24 +135,64 @@ const LoginPage: React.FC = () => {
         <PrimaryButton
           loading={loading}
           onClick={handleClick}
-          className="w-full cursor-pointer !rounded-none !px-3 py-4 !text-[19px] font-semibold !tracking-normal"
+          className="w-full cursor-pointer !rounded-none !px-3 py-3 !text-[17px] font-semibold !tracking-normal sm:py-4 sm:!text-[19px]"
         >
           Login
         </PrimaryButton>
       </div>
 
-      <div className="mt-8 w-full">
-        <div className="mb-4 text-center text-sm text-gray-400">
+      <div className="mt-6 w-full">
+        <div className="mb-3 text-center text-sm text-gray-400">
           Ainda não tens uma conta?
         </div>
         <PrimaryButton
-          className="w-full cursor-pointer !rounded-none !px-3 py-4 !text-[19px] font-semibold !tracking-normal"
+          className="w-full cursor-pointer !rounded-none !px-3 py-3 !text-[17px] font-semibold !tracking-normal sm:py-4 sm:!text-[19px]"
           onClick={() => router.push("/signup")}
         >
           Criar uma conta
         </PrimaryButton>
       </div>
     </section>
+  );
+
+  return (
+    <>
+      <div className="relative min-h-screen px-4 md:hidden">
+        <div
+          className="absolute inset-x-0 top-0"
+          style={{ bottom: "clamp(0.5rem, 6vh, 2.5rem)" }}
+        >
+          <div className="mx-auto flex h-full max-w-[420px] flex-col justify-between px-2">
+            <div
+              className="flex justify-center pt-6"
+              style={{
+                marginTop: "clamp(54px, 33vh, 270px)",
+                paddingTop: "env(safe-area-inset-top)",
+              }}
+            >
+              <Image
+                src="/assets/images/logo_white.png"
+                alt="Fallstack"
+                width={220}
+                height={90}
+                priority
+                sizes="(max-width: 640px) 54vw, 320px"
+                style={{
+                  width: "clamp(140px, 48vw, 420px)",
+                  height: "auto",
+                  maxHeight: "32vh",
+                  objectFit: "contain",
+                }}
+              />
+            </div>
+
+            <div className="w-full pb-2">{form}</div>
+          </div>
+        </div>
+      </div>
+
+      <div className="hidden md:block">{form}</div>
+    </>
   );
 };
 

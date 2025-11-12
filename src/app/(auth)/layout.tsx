@@ -7,8 +7,8 @@ interface AuthLayoutProps {
 const AuthLayout: React.FC<AuthLayoutProps> = ({ children }) => {
   return (
     <div className="flex min-h-screen w-full flex-col md:flex-row">
-      {/* Left image - anchored to left/top/bottom, keeps specified aspect ratio on desktop */}
-      <div className="auth-left relative">
+      {/* Left image - hidden on phones (we show a centered logo on mobile auth pages) */}
+      <div className="auth-left relative hidden md:block">
         <Image
           src={"/assets/images/auth-logo.jpg"}
           alt="Auth Header"
