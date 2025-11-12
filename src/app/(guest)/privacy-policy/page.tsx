@@ -1,52 +1,42 @@
-// src/app/privacy-policy/page.tsx
 
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function PrivacyPolicyPage() {
   return (
-    // Fundo preto para a página inteira
     <main className="min-h-screen bg-black text-white">
       
-      {/* 1. SECÇÃO DO HEADER COM IMAGEM DE FUNDO */}
       <section
-        className="relative flex h-[300px] w-full items-center justify-center bg-cover bg-center" // Ajuste a altura 'h-[300px]' se quiser mais ou menos
+        className="relative flex h-[300px] w-full items-center justify-center bg-cover bg-center" 
         style={{ 
-          // CAMINHO CORRETO COM BASE NO SEU FICHEIRO:
           backgroundImage: "url('/icons/headerPrivacy-policy-background.png')" 
         }} 
       >
-        {/* Overlay escuro para o logo se destacar (como na imagem original) */}
         <div className="absolute inset-0 bg-black/30" /> 
         
-        {/* Logo por cima da imagem de fundo */}
         <div className="relative z-10"> 
           <Image
-            src="/favicon.ico" // O seu logo (de 'public/favicon.ico')
+            src="/favicon.ico" 
             alt="Fall Stack Logo"
-            width={128} // Pode ajustar o tamanho do logo
+            width={128} 
             height={128}
             priority 
           />
         </div>
       </section>
 
-      {/* 2. SECÇÃO DE CONTEÚDO (POLÍTICA DE PRIVACIDADE) */}
       <section className="mx-auto max-w-4xl px-6 pb-24 pt-12">
-        {/* Botão "Voltar" */}
         <Link
-          href="/" // Link para a página inicial
+          href="/" 
           className="text-lg font-semibold text-white hover:text-gray-300"
         >
           ← Voltar
         </Link>
 
-        {/* Título */}
         <h1 className="mt-8 text-4xl font-bold md:text-5xl">
           Política de privacidade
         </h1>
 
-        {/* Todo o texto da política de privacidade começa aqui. */}
 
         <article className="mt-12">
           <h2 className="text-2xl font-semibold">
