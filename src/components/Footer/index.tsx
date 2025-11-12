@@ -97,7 +97,7 @@ const Footer: FunctionComponent<FooterProps> = ({
           </Link>
 
           <Link
-            href="https://linktr.ee/nei_isep?fbclid=PAdGRzdgOAq1JleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAaf5ctadc2-VAPEo2ph7ojuXPLbbQRuocTGN1-CYtgYHvxkj9HT2AiQi4XVKug_aem_1WJmtyUXjpjVlpwYYlXY9Q"
+            href="https://linktr.ee/nei_isep"
             target="_blank"
             rel="noreferrer"
             title="Linktree"
