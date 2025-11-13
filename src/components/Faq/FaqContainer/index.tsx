@@ -8,9 +8,7 @@ interface FaqContainerProps {
   faqs: FaqProps[];
 }
 const FaqContainer: React.FC<FaqContainerProps> = ({ faqs }) => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(
-    faqs.length ? faqs[0].index : null
-  );
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const handleToggle = (index: number) => {
     setActiveIndex((prev) => (prev === index ? null : index));
