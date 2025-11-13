@@ -32,21 +32,21 @@ export const DiamondCompanies: CompanyProps[] = [
       facebookLink: "https://www.facebook.com/grupoarmis/",
       youtubeLink: "https://www.youtube.com/@armisgroup",
       website: "https://www.armis.pt",
-      videoTitle: "Vídeo promocional",
+      videoTitle: "Video Promocional",
       videoHref:
         "https://www.youtube.com/embed/QkeMa02JqD4?si=xNaIvpGCvDycJz4A",
       facts: [
         {
-          iconSrc: Trophy,
+          icon: "trophy",
           description:
             "Multinacional com a sua presença em 11 países diferentes",
         },
         {
-          iconSrc: Archive,
+          icon: "archive",
           description: "+ 18 anos de história",
         },
         {
-          iconSrc: Leaf,
+          icon: "leaf",
           description: "Acolhimento de estagiários curriculares",
         },
       ],
@@ -84,7 +84,7 @@ export const DiamondCompanies: CompanyProps[] = [
           </p>
         </>
       ),
-      videoTitle: "Vídeo promocional",
+      videoTitle: "Video Promocional",
       website: "https://www.convatec.pt",
       instagramLink: "https://www.instagram.com/convatecostomiaportugal/?hl=pt",
       linkedinLink:
@@ -93,15 +93,15 @@ export const DiamondCompanies: CompanyProps[] = [
         "https://www.youtube.com/embed/_KY96eNgrZ8?si=irw5378pUNvFgJaE",
       facts: [
         {
-          iconSrc: Trophy,
+          icon: "trophy",
           description: "Está listada na London Stock Exchange",
         },
         {
-          iconSrc: Archive,
+          icon: "archive",
           description: "Fundada em 1978",
         },
         {
-          iconSrc: Chart,
+          icon: "chart",
           description: "Produtos e serviços vendidos em mais de 100 países",
         },
       ],
@@ -137,20 +137,20 @@ export const DiamondCompanies: CompanyProps[] = [
       linkedinLink:
         "https://www.linkedin.com/company/hitachi-solutions-portugal/",
       website: "https://hitachi-solutions.pt/",
-      videoTitle: "Vídeo promocional",
+      videoTitle: "Video Promocional",
       videoHref:
         "https://www.youtube.com/embed/I4RyT-u2aIw?si=aAfGMCR3zVnAaHJp",
       facts: [
         {
-          iconSrc: Archive,
+          icon: "archive",
           description: "Empresa de consultoria global",
         },
         {
-          iconSrc: Leaf,
+          icon: "leaf",
           description: "Cultura diversificada e recompensadora",
         },
         {
-          iconSrc: Chart,
+          icon: "chart",
           description:
             "Especializados em aplicações empresariais amigáveis baseadas na Microsoft cloud",
         },

@@ -28,7 +28,8 @@ import {
   BsInstagram as Instagram,
   BsLinkedin as Linkedin,
   BsBoxArrowUpRight as OpenCv,
-  BsTwitter as Twitter,
+  
+  BsTwitterX as Twitter,
   BsX as X,
   BsYoutube as Youtube,
 } from "react-icons/bs";

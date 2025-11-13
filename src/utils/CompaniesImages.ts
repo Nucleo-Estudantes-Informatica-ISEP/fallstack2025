@@ -11,33 +11,32 @@ import glinttLogo from "../../public/assets/images/companies/silver/glintt.webp"
 import KonkLogo from "../../public/assets/images/companies/silver/konk.webp";
 import msgLifeIberiaLogo from "../../public/assets/images/companies/silver/msg.webp";
 import NatixisLogo from "../../public/assets/images/companies/silver/natixis.png";
-
 // Sponsors
 import aeisepLogo from "../../public/assets/images/sponsors/aeisep.png";
-import divinalLogo from "../../public/assets/images/sponsors/divinal.png";
-import melhorCroissantLogo from "../../public/assets/images/sponsors/melhorCroissant.png";
-import deiLogo from "../../public/assets/images/sponsors/dei.png";
-import dominosLogo from "../../public/assets/images/sponsors/dominos.png";
 import bocaDoceLogo from "../../public/assets/images/sponsors/bocaDoce.png";
+import deiLogo from "../../public/assets/images/sponsors/dei.png";
+import divinalLogo from "../../public/assets/images/sponsors/divinal.png";
+import dominosLogo from "../../public/assets/images/sponsors/dominos.png";
+import melhorCroissantLogo from "../../public/assets/images/sponsors/melhorCroissant.png";
 
 export {
-	AccentureLogo,
-	aeisepLogo,
-	AkaLogo,
-	aprLogo,
-	armisLogo,
-	convatecLogo,
-	delloiteLogo,
-	DevscopeLogo,
-	divinalLogo,
-	glinttLogo,
-	hitachiLogo,
-	KonkLogo,
-	msgLifeIberiaLogo,
-	NatixisLogo,
-	niwLogo,
-	deiLogo,
-	dominosLogo,
-	melhorCroissantLogo,
-	bocaDoceLogo
+  AccentureLogo,
+  aeisepLogo,
+  AkaLogo,
+  aprLogo,
+  armisLogo,
+  convatecLogo,
+  delloiteLogo,
+  DevscopeLogo,
+  divinalLogo,
+  glinttLogo,
+  hitachiLogo,
+  KonkLogo,
+  msgLifeIberiaLogo,
+  NatixisLogo,
+  niwLogo,
+  deiLogo,
+  dominosLogo,
+  melhorCroissantLogo,
+  bocaDoceLogo,
 };

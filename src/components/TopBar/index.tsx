@@ -23,7 +23,13 @@ const TopBar: React.FC = () => {
         pathname.startsWith(p)
       )
   );
+  // Hide the TopBar on public company pages to match the design
+  const isCompanyPage = Boolean(pathname && pathname.startsWith("/company"));
+
+  // compute animation value (hook) before any early return so hooks order stays stable
   const opacity = useTransform(() => scrollYProgress.get() * 2.2);
+
+  if (isCompanyPage) return null;
 
   return (
     <nav className={`fixed z-40 h-16 w-full overflow-hidden`}>

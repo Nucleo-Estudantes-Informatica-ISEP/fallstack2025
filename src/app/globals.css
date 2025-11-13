@@ -3,7 +3,7 @@
 @layer utilities {
   @font-face {
     font-family: "Coolvetica";
-    src: url("/assets/fonts/coolvetica.otf") format("opentype");
+    src: url("/assets/fonts/coolvetica.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -59,6 +59,15 @@
   b,
   div {
     letter-spacing: -0.03em; /* -3% */
+  }
+
+  /* Titles use Coolvetica and should have each word capitalized */
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: Coolvetica, Inter, sans-serif;
+    text-transform: capitalize;
   }
 
   @media (max-width: 768px) {

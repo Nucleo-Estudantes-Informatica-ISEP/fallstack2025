@@ -22,20 +22,20 @@ export const GoldCompanies: CompanyProps[] = [
       website: "https://apr.pt",
       facts: [
         {
-          iconSrc: Trophy,
+          icon: "trophy",
           description:
             "Uma das 25 melhores empresas para trabalhar e desenvolver carreira em Portugal",
         },
         {
-          iconSrc: Archive,
+          icon: "archive",
           description: "Presença em várias zonas do país",
         },
         {
-          iconSrc: Trophy,
+          icon: "trophy",
           description: "Rápida adaptação a tecnologias AI",
         },
         {
-          iconSrc: Leaf,
+          icon: "leaf",
           description: "Grande presença no mercado nacional",
         },
       ],
@@ -153,16 +153,16 @@ export const GoldCompanies: CompanyProps[] = [
       website: "https://www2.deloitte.com/pt/pt.html",
       facts: [
         {
-          iconSrc: Trophy,
+          icon: "trophy",
           description:
             "Uma das 25 melhores empresas para trabalhar e desenvolver carreira em Portugal",
         },
         {
-          iconSrc: Archive,
+          icon: "archive",
           description: "Mais de 5500 pessoas em Portugal",
         },
         {
-          iconSrc: Leaf,
+          icon: "leaf",
           description: "Ambiente dinâmico, colaborativo e humano",
         },
       ],
@@ -194,19 +194,19 @@ export const GoldCompanies: CompanyProps[] = [
       website: "https://devscope.net",
       facts: [
         {
-          iconSrc: Trophy,
+          icon: "trophy",
           description: "Analytics Partner of the Year 2021",
         },
         {
-          iconSrc: Trophy,
+          icon: "trophy",
           description: "Power Platform Partner of the Year 2022",
         },
         {
-          iconSrc: Trophy,
+          icon: "trophy",
           description: "Low Code Partner of the Year 2023",
         },
         {
-          iconSrc: Archive,
+          icon: "archive",
           description: "Empresa multinacional presente há 20 anos no mercado",
         },
       ],
@@ -239,11 +239,11 @@ export const GoldCompanies: CompanyProps[] = [
       website: "https://www.niw.pt/",
       facts: [
         {
-          iconSrc: Archive,
+          icon: "archive",
           description: "Antes conhecida como Rigor",
         },
         {
-          iconSrc: Trophy,
+          icon: "trophy",
           description: "+ 200 funcionários",
         },
       ],

@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
@@ -33,6 +35,21 @@ const Company: React.FC<CompanyProps> = ({
         href={websiteUrl ? websiteUrl : "/company/" + name}
         target={websiteUrl ? "_blank" : "_self"}
         className="flex items-center justify-center"
+        onClick={(e) => {
+          // only store scroll position for internal navigation so we can restore
+          // the exact Y offset when the user returns from a company page.
+          if (!websiteUrl) {
+            try {
+              sessionStorage.setItem("companiesScroll", String(window.scrollY));
+              sessionStorage.setItem(
+                "companiesScrollPath",
+                window.location.pathname
+              );
+            } catch (err) {
+              // ignore
+            }
+          }
+        }}
       >
         <Image
           className={`${className} object-cover`}

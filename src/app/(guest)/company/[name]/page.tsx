@@ -25,7 +25,14 @@ const CompanyPage: React.FC<CompanySearchProps> = async (props0) => {
   const interests = company.props.interests!;
 
   return (
-    <section className="flex size-full flex-col items-center">
+    <section
+      className="flex size-full flex-col items-center"
+      style={{
+        backgroundImage: "url('/assets/images/background.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <CompanyPageSection
         company={company}
         modalInformation={modalInformation}

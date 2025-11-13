@@ -27,16 +27,19 @@ const CompaniesContainer: FunctionComponent<CompaniesContainerProps> = ({
   };
 
   return (
-    <motion.div className="flex flex-col items-center justify-center">
+    <motion.div
+      id={tier.toLowerCase()}
+      className="flex flex-col items-center justify-center"
+    >
       <h2
         className={`${getTierStyling(
           tier
-        )} z-0 mx-2 mb-8 text-center  text-5xl font-semibold lg:mb-4`}
+        )} z-0 mx-2 mb-8 text-center text-5xl font-semibold lg:mb-4`}
       >
         {tier}
       </h2>
       <section
-        className={`mb-12 w-full rounded-3xl  border-2 border-black/50 bg-white/20 p-4 md:w-5/6 md:p-8`}
+        className={`mb-12 w-full rounded-3xl border-2 border-black/50 bg-white/20 p-4 md:w-5/6 md:p-8`}
       >
         <div className="my-2 grid grid-cols-1 items-center justify-items-center gap-x-12 gap-y-2 xl:grid-cols-2">
           {companies.map((company) => (
