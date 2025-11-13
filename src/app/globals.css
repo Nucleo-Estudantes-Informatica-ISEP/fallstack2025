@@ -6,16 +6,16 @@
   --font-title: "Coolvetica", sans-serif;
 
   /* Colors (migrated from your old config) */
-  --color-text: var(--text, #ffffff);
-  --color-background: var(--background, #141414);
-  --color-primary: var(--primary, rgba(255, 255, 255, 0.7));
-  --color-secondary: var(--secondary, #484848);
-  --color-secondary-40: var(--secondary-40, rgba(168, 85, 247, 0.4));
-  --color-accent: var(--accent, #22d3ee);
-  --color-accent-alternative: var(--accent-alternative, #10b981);
-  --color-company-secondary: var(--company-secondary, #94a3b8);
-  --color-call-to-action: var(--call-to-action, #ef4444);
-  --color-topbar: var(--topbar, #1f2937);
+  --color-text: #ffffff;
+  --color-background: #141414;
+  --color-primary: rgba(255, 255, 255, 0.7);
+  --color-secondary: #484848;
+  --color-secondary-40: rgba(168, 85, 247, 0.4);
+  --color-accent: #22d3ee;
+  --color-accent-alternative: #10b981;
+  --color-company-secondary: #94a3b8;
+  --color-call-to-action: #ef4444;
+  --color-topbar: #1f2937;
 
   /* Background image alias */
   --image-company: var(--company-bg);
