@@ -4,16 +4,15 @@ import { DiamondCompanies } from "@/utils/DiamondCompanies";
 import { GoldCompanies } from "@/utils/GoldCompanies";
 import { SilverCompanies } from "@/utils/SilverCompanies";
 
-import HeadingText from "../../HeadingText";
 import CompaniesContainer from "../CompaniesContainer";
 
 const CompaniesSection: FunctionComponent = () => {
   return (
-    <section className="flex flex-col items-center gap-y-10 text-center md:gap-y-16">
-      <HeadingText text="Empresas" />
-      <CompaniesContainer companies={DiamondCompanies} tier="Diamond" />
-      <CompaniesContainer companies={GoldCompanies} tier="Gold" />
-      <CompaniesContainer companies={SilverCompanies} tier="Silver" />
+    <section className="*:border-y-secondary !last:border-b-0 !first:border-t-0 flex w-full flex-col text-center *:border-y *:px-10 sm:*:px-42">
+      <CompaniesContainer companies={DiamondCompanies} tier="diamond" />
+      <CompaniesContainer companies={GoldCompanies} tier="gold" />
+      <CompaniesContainer companies={SilverCompanies} tier="silver" />
+      <CompaniesContainer companies={SilverCompanies} tier="bronze" />
     </section>
   );
 };

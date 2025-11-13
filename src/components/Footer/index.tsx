@@ -1,13 +1,13 @@
 import { FunctionComponent } from "react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
+import { FaLink } from "react-icons/fa6";
 import {
   RiFacebookCircleFill,
   RiInstagramLine,
   RiLinkedinBoxFill,
   RiTwitterXFill,
 } from "react-icons/ri";
-import { FaLink } from "react-icons/fa6";
 
 // Interface das props do Footer
 interface FooterProps {
@@ -24,11 +24,9 @@ const Footer: FunctionComponent<FooterProps> = ({
 
   return (
     // Footer ocupa toda a largura, fundo preto, texto branco, altura adaptável com clamp
-    <footer className="w-full bg-[#141414] text-white relative min-h-[clamp(294px,35vh,500px)]">
-      
+    <footer className="relative min-h-[clamp(294px,35vh,500px)] w-full bg-[#141414] text-white">
       {/* Bloco central: logo + ícones */}
-      <div className="absolute inset-0 flex flex-col md:flex-row items-center justify-between px-[11vw]">
-        
+      <div className="absolute inset-0 flex flex-col items-center justify-between px-[11vw] md:flex-row">
         {/* Logo à esquerda adaptável */}
         <a
           href={NEI_WEBSITE_URL}
@@ -39,7 +37,7 @@ const Footer: FunctionComponent<FooterProps> = ({
           <Image
             src={neiSimplifiedLogo}
             alt="Logo curto do NEI"
-            className="drop-shadow-xl h-auto"
+            className="h-auto drop-shadow-xl"
             style={{
               width: "clamp(280px, 21vw, 340px)", // largura proporcional, mantém ~320px
             }}
@@ -48,20 +46,75 @@ const Footer: FunctionComponent<FooterProps> = ({
 
         {/* Ícones à direita adaptáveis */}
         <div className="flex items-center gap-[1vw]">
-          <Link href="https://www.linkedin.com/company/nei-isep" target="_blank" rel="noreferrer" title="LinkedIn" className="hover:scale-110 transition-all">
-            <RiLinkedinBoxFill style={{ width: "clamp(50px, 4vw, 58px)", height: "clamp(50px, 4vw, 58px)" }} />
+          <Link
+            href="https://www.linkedin.com/company/nei-isep"
+            target="_blank"
+            rel="noreferrer"
+            title="LinkedIn"
+            className="transition-all hover:scale-110"
+          >
+            <RiLinkedinBoxFill
+              style={{
+                width: "clamp(50px, 4vw, 58px)",
+                height: "clamp(50px, 4vw, 58px)",
+              }}
+            />
           </Link>
-          <Link href="https://www.facebook.com/nei.isep" target="_blank" rel="noreferrer" title="Facebook" className="hover:scale-110 transition-all">
-            <RiFacebookCircleFill style={{ width: "clamp(45px, 3.5vw, 50px)", height: "clamp(45px, 3.5vw, 50px)" }} />
+          <Link
+            href="https://www.facebook.com/nei.isep"
+            target="_blank"
+            rel="noreferrer"
+            title="Facebook"
+            className="transition-all hover:scale-110"
+          >
+            <RiFacebookCircleFill
+              style={{
+                width: "clamp(45px, 3.5vw, 50px)",
+                height: "clamp(45px, 3.5vw, 50px)",
+              }}
+            />
           </Link>
-          <Link href="https://www.instagram.com/nei_isep" target="_blank" rel="noreferrer" title="Instagram" className="hover:scale-110 transition-all">
-            <RiInstagramLine style={{ width: "clamp(45px, 3.5vw, 49px)", height: "clamp(45px, 3.5vw, 49px)" }} />
+          <Link
+            href="https://www.instagram.com/nei_isep"
+            target="_blank"
+            rel="noreferrer"
+            title="Instagram"
+            className="transition-all hover:scale-110"
+          >
+            <RiInstagramLine
+              style={{
+                width: "clamp(45px, 3.5vw, 49px)",
+                height: "clamp(45px, 3.5vw, 49px)",
+              }}
+            />
           </Link>
-          <Link href="https://x.com/nei_isep" target="_blank" rel="noreferrer" title="X" className="hover:scale-110 transition-all">
-            <RiTwitterXFill style={{ width: "clamp(44px, 3.5vw, 48px)", height: "clamp(44px, 3.5vw, 48px)" }} />
+          <Link
+            href="https://x.com/nei_isep"
+            target="_blank"
+            rel="noreferrer"
+            title="X"
+            className="transition-all hover:scale-110"
+          >
+            <RiTwitterXFill
+              style={{
+                width: "clamp(44px, 3.5vw, 48px)",
+                height: "clamp(44px, 3.5vw, 48px)",
+              }}
+            />
           </Link>
-          <Link href="https://linktr.ee/nei_isep" target="_blank" rel="noreferrer" title="Linktree" className="hover:scale-110 transition-all">
-            <FaLink style={{ width: "clamp(45px, 3.5vw, 49px)", height: "clamp(45px, 3.5vw, 49px)" }} />
+          <Link
+            href="https://linktr.ee/nei_isep"
+            target="_blank"
+            rel="noreferrer"
+            title="Linktree"
+            className="transition-all hover:scale-110"
+          >
+            <FaLink
+              style={{
+                width: "clamp(45px, 3.5vw, 49px)",
+                height: "clamp(45px, 3.5vw, 49px)",
+              }}
+            />
           </Link>
         </div>
       </div>
@@ -80,6 +133,11 @@ const Footer: FunctionComponent<FooterProps> = ({
           }}
         >
           Copyright (c) {currentYear}. All rights reserved.
+        </p>
+      </div>
+      <div className="flex w-full justify-center pb-6">
+        <p className="text-secondary text-sm !font-normal select-none sm:text-base">
+          Copyright &copy; {currentYear} NEI-ISEP. All rights reserved.
         </p>
       </div>
     </footer>
