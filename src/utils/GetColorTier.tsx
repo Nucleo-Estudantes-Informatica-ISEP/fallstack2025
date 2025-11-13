@@ -1,4 +1,4 @@
-export type CompaniesTier = "Diamond" | "Gold" | "Silver";
+export type CompaniesTier = "Diamond" | "Gold" | "Silver" | "Bronze";
 
 export const getColorOfTier = (tier: CompaniesTier): string => {
   switch (tier) {
@@ -8,6 +8,8 @@ export const getColorOfTier = (tier: CompaniesTier): string => {
       return "yellow-400";
     case "Silver":
       return "gray-500";
+    case "Bronze":
+      return "yellow-600";
     default:
       throw new Error("Tier not found");
   }
