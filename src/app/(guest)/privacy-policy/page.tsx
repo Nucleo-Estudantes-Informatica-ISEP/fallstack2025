@@ -9,7 +9,7 @@ export default function PrivacyPolicyPage() {
       <section
         className="relative flex h-[300px] w-full items-center justify-center bg-cover bg-center" 
         style={{ 
-          backgroundImage: "url('/icons/headerPrivacy-policy-background.png')" 
+          backgroundImage: "url('/icons/header-privacy-policy-background.png')" 
         }} 
       >
         <div className="absolute inset-0 bg-black/30" /> 
