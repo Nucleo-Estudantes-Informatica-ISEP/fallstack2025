@@ -19,12 +19,12 @@ const CompaniesContainer: FunctionComponent<CompaniesContainerProps> = ({
         <span className="text-secondary">Parceiros</span>{" "}
         <span className={`${getTierStyling(tier)}`}>{tier}</span>
       </h2>
-      <section className={`w-full rounded-3xl`}>
-        <div className="my-2 grid w-full grid-cols-1 place-items-center gap-12 md:flex md:flex-wrap md:items-center md:justify-center md:gap-16">
+      <section className={`w-full rounded-3xl px-4`}>
+        <div className="my-2 grid w-full grid-cols-2 place-items-center gap-4 sm:gap-6 md:flex md:flex-wrap md:items-center md:justify-center md:gap-12 lg:gap-16">
           {companies.map((company) => (
             <div
               key={company.name}
-              className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex justify-center"
+              className="w-full max-w-[140px] sm:max-w-[160px] md:w-auto md:max-w-[180px] lg:max-w-[200px] flex justify-center"
             >
               <Company {...company} />
             </div>
