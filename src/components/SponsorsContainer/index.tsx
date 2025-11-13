@@ -13,7 +13,7 @@ const SponsorsContainer: React.FC<SponsorsContainerProps> = ({ sponsors }) => {
         Agradecimentos
       </h2>
       <section className={`w-full rounded-3xl`}>
-        <div className="my-2 grid w-full grid-cols-1 place-items-center gap-8 md:flex md:flex-wrap md:items-center md:justify-center">
+        <div className="mx-auto flex w-full flex-wrap gap-8 items-center justify-around md:w-5/6">
           {sponsors.map(({ name, logoHref, website }) => (
             <Sponsor
               key={name}

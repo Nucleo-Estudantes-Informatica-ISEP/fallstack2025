@@ -10,10 +10,10 @@ import CompaniesContainer from "../CompaniesContainer";
 const CompaniesSection: FunctionComponent = () => {
   return (
     <section className="flex flex-col items-center text-center">
-      <CompaniesContainer companies={DiamondCompanies} tier="Diamond" />
-      <CompaniesContainer companies={GoldCompanies} tier="Gold" />
-      <CompaniesContainer companies={SilverCompanies} tier="Silver" />
-      <CompaniesContainer companies={BronzeCompanies} tier="Bronze" />
+      <CompaniesContainer companies={DiamondCompanies} tier="diamond" />
+      <CompaniesContainer companies={GoldCompanies} tier="gold" />
+      <CompaniesContainer companies={SilverCompanies} tier="silver" />
+      <CompaniesContainer companies={BronzeCompanies} tier="bronze" />
     </section>
   );
 };
