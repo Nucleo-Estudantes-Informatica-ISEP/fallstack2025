@@ -72,7 +72,7 @@
     "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-react-hooks": "^7.0.0",
     "eslint-plugin-tailwindcss": "4.0.0-beta.0",
-    "firebase-admin": "^13.5.0",
+    "firebase-admin": "^13.6.0",
     "framer-motion": "^10.16.4",
     "globals": "^16.4.0",
     "lodash": "^4.17.21",
