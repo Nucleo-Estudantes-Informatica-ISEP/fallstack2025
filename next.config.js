@@ -1,3 +1,5 @@
+const isDev = process.env.NODE_ENV !== "production";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -25,6 +27,17 @@ const nextConfig = {
         hostname: "storage.googleapis.com",
         pathname: "/**",
       },
+      // Local Supabase storage gateway (dev only)
+      ...(isDev
+        ? [
+            {
+              protocol: "http",
+              hostname: "127.0.0.1",
+              port: "54321",
+              pathname: "/storage/v1/object/public/**",
+            },
+          ]
+        : []),
     ],
   },
 };
