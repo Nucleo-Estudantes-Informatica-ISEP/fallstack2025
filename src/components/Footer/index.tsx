@@ -9,7 +9,7 @@ import {
 } from "react-icons/ri";
 
 import InstallButton from "../InstallButton";
-import { LinkSolid } from "@mynaui/icons-react";
+import { FaLink } from "react-icons/fa6";
 
 interface FooterProps {
   neiLogoSrc: StaticImageData;
@@ -76,7 +76,7 @@ const Footer: FunctionComponent<FooterProps> = ({ neiLogoSrc }) => {
               className="h-max text-xl drop-shadow-xl transition-all duration-300 hover:scale-110 hover:drop-shadow-2xl"
               title="Linktree do NEI"
             >
-              <LinkSolid size={45} />
+              <FaLink size={45} />
             </Link>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-5">
