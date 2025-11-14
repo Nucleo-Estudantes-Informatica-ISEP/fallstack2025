@@ -175,8 +175,8 @@ export const GoldCompanies: CompanyProps[] = [
     },
   },
   {
-    logoHref: devoteamLogo,
-    name: "devScope",
+    logoHref: devscopeLogo,
+    name: "Devscope",
     interests: ["AI", "Software Development", "Frontend"],
     modalInformation: {
       title: "DevScope",
@@ -219,8 +219,8 @@ export const GoldCompanies: CompanyProps[] = [
     },
   },
   {
-    logoHref: devscopeLogo,
-    name: "niw",
+    logoHref: devoteamLogo,
+    name: "Devoteam",
     interests: [
       "Infrastructure",
       "Devops",
@@ -228,7 +228,7 @@ export const GoldCompanies: CompanyProps[] = [
       "Analytics",
     ],
     modalInformation: {
-      title: "NiW",
+      title: "Devoteam",
       bodyText: (
         <p>
           NiW is a fresh chapter for a brand with a long, successful history,

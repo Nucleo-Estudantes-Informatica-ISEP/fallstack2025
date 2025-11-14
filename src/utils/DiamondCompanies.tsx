@@ -124,7 +124,7 @@ export const DiamondCompanies: CompanyProps[] = [
     name: "Cloudflare",
     interests: ["Backend", "Cloud Computing", "Data Analysis"],
     modalInformation: {
-      title: "Hitachi Solutions",
+      title: "Cloudflare",
       bodyText: (
         <>
           <p>
