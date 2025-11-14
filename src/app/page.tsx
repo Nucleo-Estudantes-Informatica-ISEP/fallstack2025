@@ -26,8 +26,7 @@ const App: FunctionComponent = () => {
         <Content contentRef={contentRef} />
         <HeadsUp />
         <Footer
-          lastEditionUrl="https://fallstack2023.nei-isep.org/"
-          neiSimplifiedLogo={NeiLogoSimplifiedWhite}
+          neiLogoSrc={NeiLogoSimplifiedWhite}
         />
       </GenericContainer>
     </HeroContainer>
