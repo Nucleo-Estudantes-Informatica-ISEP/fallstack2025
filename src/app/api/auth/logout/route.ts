@@ -3,9 +3,14 @@ import { NextResponse } from "next/server";
 
 import config from "@/config";
 
+import { createClient as createSupabaseServerClient } from "../../../../../supabase/client";
+
 export async function POST() {
   try {
-    // deletes the auth cookie
+    const supabase = await createSupabaseServerClient();
+    await supabase.auth.signOut();
+
+    // also delete legacy auth cookie if present
     (await cookies()).delete({ name: config.cookies.auth.name });
 
     return NextResponse.json(
