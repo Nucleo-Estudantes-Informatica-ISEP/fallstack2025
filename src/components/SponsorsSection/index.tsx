@@ -5,7 +5,7 @@ import SponsorsContainer from "../SponsorsContainer";
 
 const SponsorsSection: FunctionComponent = () => {
   return (
-    <section className="bg-background border-b-secondary flex flex-col items-center gap-y-10 border-b text-center md:gap-y-16">
+     <section className="bg-background border-b-secondary flex flex-col items-center gap-y-10 border-b text-center">
       <SponsorsContainer sponsors={Sponsors} />
     </section>
   );
