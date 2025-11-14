@@ -13,4 +13,7 @@ export const postStudentSchema = object({
   interests: z.array(string()),
   avatar: string().uuid().optional(),
   cv: string().uuid().optional(),
+  // Supabase-based alternative fields
+  avatarUrl: string().url().optional(),
+  cvId: string().uuid().optional(),
 });
