@@ -25,7 +25,13 @@ The event takes place in ISEP (Instituto Superior de Engenharia do Porto) in the
 1. Clone the repository
 2. Install dependencies with `pnpm i`
 3. Set up the environment variables `cp .env.example .env`
-4. Run `pnpm migrate` to apply the migrations.
+   - Provide Supabase envs: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`, `SUPABASE_URL`, `SUPABASE_KEY` (service role).
+   - In Supabase Storage, create two buckets:
+     - `avatars` (public)
+     - `cvs` (private)
+   - If migrating from the previous Firebase storage, old uploads continue to work; new uploads use Supabase.
+   - For immediate signup sessions (required by the existing signup flow), disable email confirmation in your Supabase Auth settings or adjust the flow to wait for confirmation.
+4. Run `pnpm prisma db push` (or `pnpm generate` then `prisma migrate`) to sync schema.
 5. Generate the Prisma Client with `pnpm generate`
 
 ## Running locally
@@ -36,10 +42,10 @@ To start the local server use
 pnpm dev
 ```
 
-> 💡 Use our docker compose file to create the MySQL database locally.
+> 💡 Use our docker compose to run Postgres locally for Prisma.
 
 ```bash
-docker compose up -d
+docker compose up -d db
 ```
 
 ## Sync database schema
@@ -57,6 +63,16 @@ To run the seeding script run
 ```bash
 pnpm seed
 ```
+
+## Supabase Setup
+
+- Create a Supabase project and set the following env vars from your project settings:
+  - `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`
+  - `SUPABASE_URL`, `SUPABASE_KEY` (service role)
+- Create storage buckets:
+  - `avatars` (public)
+  - `cvs` (private)
+- Disable email confirmation for immediate sign-in after signup, or adjust the flow.
 
 ## Wipe DB
 
