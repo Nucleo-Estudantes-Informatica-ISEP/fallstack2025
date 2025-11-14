@@ -10,19 +10,19 @@ datasource db {
 
 model User {
   id       String   @id @default(uuid()) @db.Uuid
+  email    String   @unique
   role     Role     @default(STUDENT)
   isAdmin  Boolean  @default(false)
-  updatedAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   student   Student?
   company   Company?
-  interests UserInterest[]
+  interests Interest[]
 }
 
 model Student {
-  id       String   @id @default(uuid())
-  user     User     @relation(fields: [userId], references: [id])
-  userId   String   @unique @db.Uuid
+  id       String   @id @db.Uuid
+  user     User     @relation(fields: [id], references: [id], onDelete: Cascade)
 
   code     String   @unique
   name     String
@@ -32,21 +32,26 @@ model Student {
   linkedin String?
   github   String?
   avatar   String?
+  updatedAt DateTime @updatedAt
 
   actionCompletions ActionCompletion[]
   savedByCompanies  SavedStudent[]
+
+  @@index([code])
 }
 
 model Company {
-  id       String   @id @default(uuid())
-  user     User     @relation(fields: [userId], references: [id])
-  userId   String   @unique @db.Uuid
+  id       String   @id @db.Uuid
+  user     User     @relation(fields: [id], references: [id], onDelete: Cascade)
 
   name     String   @unique
   tier     Tier
   avatar   String?
+  updatedAt DateTime @updatedAt
 
   savedStudents SavedStudent[]
+
+  @@index([name])
 }
 
 model Action {
@@ -57,6 +62,7 @@ model Action {
   altText     String?
   isLive      Boolean  @default(false)
   isVisible   Boolean  @default(true)
+  updatedAt   DateTime @updatedAt
 
   actionCompletions ActionCompletion[]
 }
@@ -66,40 +72,29 @@ model ActionCompletion {
   completedAt DateTime @default(now())
 
   action       Action   @relation(fields: [actionId], references: [id])
-  student      Student  @relation(fields: [studentCode], references: [code])
+  student      Student  @relation(fields: [studentId], references: [id])
 
   actionId     String
-  studentCode  String
+  studentId    String   @db.Uuid
 
-  @@unique([actionId, studentCode])
+  @@unique([actionId, studentId])
 }
 
 model Interest {
   id     String  @id @default(uuid()) @db.Uuid
   name   String  @unique
 
-  users  UserInterest[]
-}
-
-model UserInterest {
-  user       User     @relation(fields: [userId], references: [id])
-  interest   Interest @relation(fields: [interestId], references: [id])
-
-  userId     String @db.Uuid
-  interestId String @db.Uuid
-
-  @@id([userId, interestId])
+  users  User[]
 }
 
 model SavedStudent {
-  id        String   @id @default(uuid())
-  student   Student  @relation(fields: [studentId], references: [id])
-  savedBy   Company  @relation(fields: [savedById], references: [id])
-  isSaved   Boolean  @default(false)
+  studentId String   @db.Uuid
+  companyId String   @db.Uuid
+  student   Student  @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  savedBy   Company  @relation(fields: [companyId], references: [id], onDelete: Cascade)
   createdAt DateTime @default(now())
 
-  studentId String
-  savedById String
+  @@id([studentId, companyId])
 }
 
 enum Role {
