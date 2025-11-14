@@ -56,7 +56,7 @@ const ProfileSection: React.FC<ProfileSectionProps> = ({
 
       <ActionsSection actions={actions} />
 
-      <InterestMatchingSection userId={student.userId} />
+      <InterestMatchingSection userId={student.id} />
     </section>
   );
 };

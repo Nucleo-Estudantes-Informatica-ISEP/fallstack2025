@@ -8,6 +8,7 @@ import { BASE_URL } from "@/services/api";
 import HistorySection from "@/components/HistorySection";
 import PrimaryButton from "@/components/PrimaryButton";
 import InterestSelector from "@/components/Profile/InterestSelector";
+import swal from "sweetalert";
 
 interface StatsProps {
   stats: number[];
