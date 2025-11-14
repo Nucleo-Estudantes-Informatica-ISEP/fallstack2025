@@ -44,4 +44,3 @@ next-env.d.ts
 certificates
 
 prisma/seed.prod.ts
-package-lock.json
