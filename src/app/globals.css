@@ -10,11 +10,13 @@
   /* Colors (migrated from your old config) */
   --color-text: #ffffff;
   --color-background: #141414;
-  /* main primary color (restored to the orange used across the project) */
-  --color-primary: #f97316;
+  --color-primary: rgba(255, 255, 255, 0.7);
   /* backward-compatible aliases for older variable names used across the codebase */
-  --primary: var(--color-primary);
+  /* Restore legacy button primary color (orange) that was used before the reset */
+  --primary: #f97316; /* Tailwind orange-500, matches previous orange-ish look */
   --color-secondary: #484848;
+  /* legacy alias for older code that used --secondary */
+  --secondary: var(--color-secondary);
   --color-secondary-40: rgba(168, 85, 247, 0.4);
   --color-accent: #22d3ee;
   --color-accent-alternative: #10b981;
