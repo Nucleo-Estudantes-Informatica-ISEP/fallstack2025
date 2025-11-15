@@ -1,8 +1,7 @@
 import { PrismaClient, Role, Tier } from "@prisma/client";
+import { createAdminClient } from "~/supabase/admin";
 
 import config from "@/config";
-
-import { createAdminClient } from "../supabase/admin";
 
 const prisma = new PrismaClient();
 
