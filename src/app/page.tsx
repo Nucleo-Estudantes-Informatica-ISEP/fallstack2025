@@ -4,8 +4,7 @@ import { FunctionComponent, useRef } from "react";
 
 import HeroContainer from "@/components/HeroContainer";
 
-import LogoWhite from "../../public/assets/images/logo_white.png";
-import NeiLogoWhite from "../../public/assets/images/logo-white.png";
+import LogoWhite from "../../public/assets/images/logo_white.svg";
 import NeiLogoSimplifiedWhite from "../../public/assets/images/logo-simplified-white.png";
 import Content from "../components/Content";
 import Footer from "../components/Footer";
@@ -26,10 +25,7 @@ const App: FunctionComponent = () => {
         />
         <Content contentRef={contentRef} />
         <HeadsUp />
-        <Footer
-          lastEditionUrl="https://fallstack2024.nei-isep.org/"
-          neiSimplifiedLogo={NeiLogoSimplifiedWhite}
-        />
+        <Footer neiLogoSrc={NeiLogoSimplifiedWhite} />
       </GenericContainer>
     </HeroContainer>
   );
