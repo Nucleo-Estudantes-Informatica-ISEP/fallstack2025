@@ -23,17 +23,6 @@ const InfoText: React.FC<InfoTextProps> = ({
   endTime,
 }) => {
   return (
-<<<<<<< HEAD
-    <>
-      <HeadingText className="text-3xl md:text-5xl" text="#FallStack2025" />
-      <div className="mb-24 flex flex-col text-xl lg:flex-row">
-        <EventInfos
-          days={days}
-          month={month}
-          beginningTime={beginningTime}
-          endTime={endTime}
-        />
-=======
     <motion.section
       initial={{
         opacity: 0,
@@ -55,7 +44,6 @@ const InfoText: React.FC<InfoTextProps> = ({
         beginningTime={beginningTime}
         endTime={endTime}
       />
->>>>>>> origin/main
 
       <PrimaryLinkButton
         loading={false}

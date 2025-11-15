@@ -28,11 +28,7 @@ const TopBar: React.FC = () => {
   return (
     <nav className={`fixed z-40 h-16 w-full overflow-hidden`}>
       <motion.div
-<<<<<<< HEAD
-        className={`bg-topbar absolute top-0 left-0 flex h-16 w-screen items-center justify-between`}
-=======
         className={`bg-background absolute top-0 left-0 flex h-16 w-screen items-center justify-between`}
->>>>>>> origin/main
         style={{
           opacity,
         }}

@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@plugin 'tailwind-scrollbar';
+@plugin "tailwind-scrollbar";
 
 @theme {
   /* Fonts */
@@ -46,17 +46,6 @@
   from {
     opacity: 0;
   }
-<<<<<<< HEAD
-
-  /* Self-hosted Inter */
-  @font-face {
-    font-family: "Inter";
-    src: url("/assets/fonts/inter.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-=======
   to {
     opacity: 1;
   }
@@ -68,12 +57,18 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
->>>>>>> origin/main
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/inter.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @layer base {
   :root {
-<<<<<<< HEAD
     --text: #fff;
     --background: #141414;
     --primary: #b1440a;
@@ -86,10 +81,6 @@
     --call-to-action: #606c38;
     --topbar: #693514;
     background: var(--background);
-=======
-    --text: #ffffff;
-    --background: #141414;
->>>>>>> origin/main
     color: var(--text);
     font-family: Inter, sans-serif;
     font-feature-settings:

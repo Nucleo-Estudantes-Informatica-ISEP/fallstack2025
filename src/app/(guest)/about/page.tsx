@@ -24,11 +24,7 @@ const about: React.FC = () => {
         <p className="my-4 text-center text-lg">
           <Link
             href="https://github.com/Nucleo-Estudantes-Informatica-ISEP/fallstack2025"
-<<<<<<< HEAD
             className="text-primary font-normal"
-=======
-            className="font-normal text-primary"
->>>>>>> origin/main
           >
             https://github.com/Nucleo-Estudantes-Informatica-ISEP/fallstack2025
           </Link>
