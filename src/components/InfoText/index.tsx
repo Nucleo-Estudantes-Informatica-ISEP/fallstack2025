@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 
-import EventInfos from "../EventInfos/index";
-import HeadingText from "../HeadingText";
+import EventInfos from "@/components/EventInfos/index";
+import HeadingText from "@/components/HeadingText";
 
 interface InfoTextProps {
   days: number[];

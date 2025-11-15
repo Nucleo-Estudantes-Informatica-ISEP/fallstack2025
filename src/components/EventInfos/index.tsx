@@ -1,8 +1,9 @@
+"use client";
+
 import { FunctionComponent } from "react";
 
+import InfoBit from "@/components/InfoBit";
 import { Alarm, CalendarEvent, GeoAlt } from "@/styles/Icons";
-
-import InfoBit from "../InfoBit";
 
 interface EventInfosProps {
   days: number[];

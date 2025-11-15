@@ -1,6 +1,8 @@
+"use client";
+
 import React from "react";
 
-import Sponsor, { SponsorProps } from "../Sponsor";
+import Sponsor, { SponsorProps } from "@/components/Sponsor";
 
 interface SponsorsContainerProps {
   sponsors: SponsorProps[];

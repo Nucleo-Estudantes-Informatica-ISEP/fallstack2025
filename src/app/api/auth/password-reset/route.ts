@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
+import { createAdminClient } from "~/supabase/admin";
 
 import { resetSchema } from "@/schemas/resetSchema";
-
-import { createAdminClient } from "../../../../../supabase/admin";
 
 export async function POST(req: NextRequest) {
   const body = await req.json();

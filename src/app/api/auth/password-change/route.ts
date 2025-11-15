@@ -1,10 +1,9 @@
 import { NextResponse } from "next/server";
+import { createAdminClient } from "~/supabase/admin";
 import { ZodError } from "zod";
 
 import prisma from "@/lib/prisma";
 import { changePasswordSchema } from "@/schemas/changePasswordSchema";
-
-import { createAdminClient } from "../../../../../supabase/admin";
 
 export async function POST(req: Request) {
   try {

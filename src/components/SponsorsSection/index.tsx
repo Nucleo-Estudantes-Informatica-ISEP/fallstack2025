@@ -1,8 +1,10 @@
+"use client";
+
 import { FunctionComponent } from "react";
 
-import { Sponsors } from "../../utils/Sponsors";
-import HeadingText from "../HeadingText";
-import SponsorsContainer from "../SponsorsContainer";
+import HeadingText from "@/components/HeadingText";
+import SponsorsContainer from "@/components/SponsorsContainer";
+import { Sponsors } from "@/utils/Sponsors";
 
 const CompaniesSection: FunctionComponent = () => {
   return (

@@ -1,4 +1,5 @@
-import { CompanyProps } from "../components/Companies/Company";
+import { CompanyProps } from "@/components/Companies/Company";
+
 import {
   AccentureLogo,
   AkaLogo,

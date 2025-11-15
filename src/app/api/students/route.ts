@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { createAdminClient } from "~/supabase/admin";
 import { ZodError } from "zod";
 
 import config from "@/config";
@@ -7,8 +8,6 @@ import prisma from "@/lib/prisma";
 import getServerSession from "@/services/getServerSession";
 import { postStudentSchema } from "@/schemas/postStudentSchema";
 import generateRandomCode from "@/utils/GenerateCode";
-
-import { createAdminClient } from "../../../../supabase/admin";
 
 export async function POST(req: Request) {
   try {

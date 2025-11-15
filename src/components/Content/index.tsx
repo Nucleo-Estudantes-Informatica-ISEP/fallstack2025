@@ -1,12 +1,15 @@
-import Connect from "../../../public/assets/images/connect.png";
-import Pitch from "../../../public/assets/images/pitch.png";
-import { ScheduleDays } from "../../utils/ScheduleDays";
-import Activity from "../Activity";
-import CompaniesSection from "../Companies/CompaniesSection";
-import FaqSection from "../Faq/FaqSection";
-import InfoText from "../InfoText";
-import Schedule from "../Schedule";
-import SponsorsSection from "../SponsorsSection";
+"use client";
+
+import Connect from "~/public/assets/images/connect.png";
+import Pitch from "~/public/assets/images/pitch.png";
+
+import Activity from "@/components/Activity";
+import CompaniesSection from "@/components/Companies/CompaniesSection";
+import FaqSection from "@/components/Faq/FaqSection";
+import InfoText from "@/components/InfoText";
+import Schedule from "@/components/Schedule";
+import SponsorsSection from "@/components/SponsorsSection";
+import { ScheduleDays } from "@/utils/ScheduleDays";
 
 interface ContentProps {
   contentRef: React.RefObject<HTMLDivElement>;

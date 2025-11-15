@@ -1,11 +1,12 @@
+"use client";
+
 import { FunctionComponent } from "react";
 
+import CompaniesContainer from "@/components/Companies/CompaniesContainer";
+import HeadingText from "@/components/HeadingText";
 import { DiamondCompanies } from "@/utils/DiamondCompanies";
 import { GoldCompanies } from "@/utils/GoldCompanies";
 import { SilverCompanies } from "@/utils/SilverCompanies";
-
-import HeadingText from "../../HeadingText";
-import CompaniesContainer from "../CompaniesContainer";
 
 const CompaniesSection: FunctionComponent = () => {
   return (

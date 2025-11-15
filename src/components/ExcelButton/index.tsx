@@ -3,7 +3,7 @@
 import { useState } from "react";
 import * as XLSX from "xlsx";
 
-import Spinner from "../Spinner";
+import Spinner from "@/components/Spinner";
 
 import download from "downloadjs";
 

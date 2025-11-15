@@ -24,4 +24,3 @@ export async function uploadCv(file: File) {
   if (!res.ok) return null;
   return (await res.json()) as { id: string };
 }
-

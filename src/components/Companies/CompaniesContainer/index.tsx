@@ -1,8 +1,10 @@
+"use client";
+
 import { FunctionComponent } from "react";
 import { motion } from "framer-motion";
 
-import { CompaniesTier } from "../../../utils/GetColorTier";
-import Company, { CompanyProps } from "../Company";
+import Company, { CompanyProps } from "@/components/Companies/Company";
+import { CompaniesTier } from "@/utils/GetColorTier";
 
 interface CompaniesContainerProps {
   tier: CompaniesTier;

@@ -1,3 +1,5 @@
+"use client";
+
 import { FunctionComponent } from "react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
@@ -10,7 +12,7 @@ import {
   RiTwitterXFill,
 } from "react-icons/ri";
 
-import InstallButton from "../InstallButton";
+import InstallButton from "@/components/InstallButton";
 
 interface FooterProps {
   lastEditionUrl: string;

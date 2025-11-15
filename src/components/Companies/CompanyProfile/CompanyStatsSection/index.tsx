@@ -2,13 +2,13 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import swal from "sweetalert";
 
 import { SavedStudentWithSavedBy } from "@/types/SavedStudentWithSavedBy";
 import { BASE_URL } from "@/services/api";
 import HistorySection from "@/components/HistorySection";
 import PrimaryButton from "@/components/PrimaryButton";
 import InterestSelector from "@/components/Profile/InterestSelector";
-import swal from "sweetalert";
 
 interface StatsProps {
   stats: number[];

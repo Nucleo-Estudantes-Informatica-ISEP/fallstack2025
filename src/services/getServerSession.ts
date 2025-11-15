@@ -1,6 +1,6 @@
-import prisma from "@/lib/prisma";
+import { createClient as createSupabaseServerClient } from "~/supabase/client";
 
-import { createClient as createSupabaseServerClient } from "../../supabase/client";
+import prisma from "@/lib/prisma";
 
 const getServerSession = async () => {
   try {

@@ -1,9 +1,8 @@
 import { NextResponse } from "next/server";
+import { createClient as createSupabaseServerClient } from "~/supabase/client";
 import { ZodError } from "zod";
 
 import { signInSchema } from "@/schemas/signInSchema";
-
-import { createClient as createSupabaseServerClient } from "../../../../../supabase/client";
 
 export async function POST(req: Request) {
   try {

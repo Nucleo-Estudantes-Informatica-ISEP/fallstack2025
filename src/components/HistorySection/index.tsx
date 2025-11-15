@@ -1,3 +1,5 @@
+"use client";
+
 import { SavedStudentWithSavedBy } from "@/types/SavedStudentWithSavedBy";
 import { formatDateDDStrMonthHourMin } from "@/utils/date";
 

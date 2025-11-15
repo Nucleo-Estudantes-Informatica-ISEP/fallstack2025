@@ -14,16 +14,15 @@ import {
   uploadCv as uploadCvToSupabase,
 } from "@/lib/upload";
 import { BASE_URL } from "@/services/api";
+import Modal from "@/components/Modal";
 import PrimaryButton from "@/components/PrimaryButton";
 import AvatarCropper from "@/components/Profile/AvatarCropper";
+import ImportCvSection from "@/components/Profile/ImportCvSection";
+import Input from "@/components/Profile/Input";
+import InterestSelector from "@/components/Profile/InterestSelector";
+import UserBioTextArea from "@/components/Profile/UserBioTextArea";
 import UserImage from "@/components/Profile/UserImage";
 import { getCroppedImg } from "@/utils/canvas";
-
-import Modal from "../../Modal";
-import ImportCvSection from "../ImportCvSection";
-import Input from "../Input";
-import InterestSelector from "../InterestSelector";
-import UserBioTextArea from "../UserBioTextArea";
 
 interface SettingsSectionProps {
   student: Student & { user: User };
