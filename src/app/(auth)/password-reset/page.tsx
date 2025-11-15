@@ -98,7 +98,7 @@ const RequestResetPage: React.FC = () => {
               }}
             >
               <Image
-                src="/assets/images/logo_white.png"
+                src="/assets/images/logo_white.svg"
                 alt="Fallstack"
                 width={220}
                 height={90}
