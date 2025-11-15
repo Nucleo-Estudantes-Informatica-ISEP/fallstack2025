@@ -25,9 +25,7 @@ const App: FunctionComponent = () => {
         />
         <Content contentRef={contentRef} />
         <HeadsUp />
-        <Footer
-          neiLogoSrc={NeiLogoSimplifiedWhite}
-        />
+        <Footer neiLogoSrc={NeiLogoSimplifiedWhite} />
       </GenericContainer>
     </HeroContainer>
   );
