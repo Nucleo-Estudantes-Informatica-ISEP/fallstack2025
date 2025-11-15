@@ -34,18 +34,22 @@ const TopBar: React.FC = () => {
         }}
       />
       <div className="absolute top-2 right-4 flex h-12 w-full items-center justify-between space-x-4 px-4 py-2">
-        <Link href="/" className="ml-6">
-          <Image
-            src={"/assets/images/logo_white.svg"}
-            alt="Fallstack"
-            width={32}
-            height={32}
-          />
-        </Link>
+        {!isAuthPage ? (
+          <Link href="/" className="ml-6">
+            <Image
+              src={"/assets/images/logo_white.svg"}
+              alt="Fallstack"
+              width={32}
+              height={32}
+            />
+          </Link>
+        ) : (
+          <div className="ml-6" />
+        )}
         <div className="flex items-center gap-x-4">
           {!session.user ? (
             <Link
-              href="/login"
+              href={isAuthPage ? "/" : "/login"}
               className="hover:text-primary z-20 flex size-full items-center justify-center fill-white text-2xl transition-colors"
             >
               <LogIn />

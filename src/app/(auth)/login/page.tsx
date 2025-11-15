@@ -165,7 +165,7 @@ const LoginPage: React.FC = () => {
           {/* Icon is dynamic: width depends on viewport but capped with maxWidth */}
           <div className="mb-4 flex justify-center">
             <Image
-              src="/assets/images/logo_white.png"
+              src="/assets/images/logo_white.svg"
               alt="Fallstack"
               width={220}
               height={90}
