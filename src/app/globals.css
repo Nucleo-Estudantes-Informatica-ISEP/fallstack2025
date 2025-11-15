@@ -10,7 +10,10 @@
   /* Colors (migrated from your old config) */
   --color-text: #ffffff;
   --color-background: #141414;
-  --color-primary: rgba(255, 255, 255, 0.7);
+  /* main primary color (restored to the orange used across the project) */
+  --color-primary: #f97316;
+  /* backward-compatible aliases for older variable names used across the codebase */
+  --primary: var(--color-primary);
   --color-secondary: #484848;
   --color-secondary-40: rgba(168, 85, 247, 0.4);
   --color-accent: #22d3ee;
