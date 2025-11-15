@@ -23,10 +23,13 @@ const Input: React.FC<InputProps> = ({
   return (
     <div className="flex w-full flex-col">
       <label
-        className={`text-slate-700 md:text-lg ${
-          center ? " mb-4 text-center" : ""
-        }`}
+        className={`${center ? "mb-4 text-center" : ""} text-white`}
         htmlFor={name}
+        style={{
+          fontFamily: "Inter, sans-serif",
+          fontWeight: 400,
+          fontSize: "16px",
+        }}
       >
         {name}
       </label>
@@ -37,8 +40,7 @@ const Input: React.FC<InputProps> = ({
         id={name}
         placeholder={placeholder}
         ref={inputRef}
-        className={`rounded-md border border-gray-400 bg-slate-200 px-4 py-1
-         text-black focus:border-primary focus:ring-0 disabled:text-gray-600 ${className}`}
+        className={`focus:border-primary rounded-md border border-gray-400 px-3 py-2 text-white focus:ring-0 disabled:text-gray-600 ${className ?? ""}`}
         {...rest}
       />
     </div>

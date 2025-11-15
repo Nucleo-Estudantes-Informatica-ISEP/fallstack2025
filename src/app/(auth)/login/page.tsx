@@ -60,23 +60,24 @@ const LoginPage: React.FC = () => {
     if (e.key === "Enter") handleClick();
   };
 
-  return (
-    <section className="flex w-full flex-col md:mt-12">
-      <div className="mb-5 flex justify-center">
-        <Image
-          src={"/assets/images/logo_dark.png"}
-          width={128}
-          height={128}
-          alt="Logo"
+  const form = (
+    <section className="flex w-full flex-col md:mt-0">
+      <h1
+        className="mb-6 w-full text-center text-[28px] font-semibold text-white md:text-left md:text-[45px]"
+        style={{ fontFamily: "Inter, sans-serif" }}
+      >
+        Iniciar Sessão
+      </h1>
+
+      <div className="w-full">
+        <Input
+          name="Email"
+          inputRef={emailRef}
+          autoFocus={!!emailError}
+          onKeyUp={handleKeyUp}
+          className="!rounded-none !border-[rgba(255,255,255,0.35)] bg-transparent px-3 py-2 text-white placeholder:text-gray-500 sm:py-3"
         />
       </div>
-      <Input
-        name="Email"
-        placeholder="Insere o teu email"
-        inputRef={emailRef}
-        autoFocus={!!emailError}
-        onKeyUp={handleKeyUp}
-      />
 
       {emailError && (
         <motion.p
@@ -93,16 +94,18 @@ const LoginPage: React.FC = () => {
         </motion.p>
       )}
 
-      <span className="mt-4"></span>
+      <span className="mt-3"></span>
 
-      <Input
-        name="Password"
-        placeholder="Insere a tua password"
-        type="password"
-        inputRef={passwordRef}
-        autoFocus={!!pwError}
-        onKeyUp={handleKeyUp}
-      />
+      <div className="mt-4 w-full">
+        <Input
+          name="A tua palavra-passe"
+          type="password"
+          inputRef={passwordRef}
+          autoFocus={!!pwError}
+          onKeyUp={handleKeyUp}
+          className="!rounded-none !border-[rgba(255,255,255,0.35)] bg-transparent px-3 py-2 text-white placeholder:text-gray-500 sm:py-3"
+        />
+      </div>
 
       {pwError && (
         <motion.p
@@ -119,20 +122,77 @@ const LoginPage: React.FC = () => {
         </motion.p>
       )}
 
-      <PrimaryButton
-        loading={loading}
-        onClick={handleClick}
-        className="mb-5 mt-4 font-bold"
-      >
-        LOGIN
-      </PrimaryButton>
+      <div className="mt-2 w-full">
+        <div className="mb-8 w-full text-right">
+          <Link
+            href="/password-reset"
+            className="text-sm text-gray-400 underline"
+          >
+            Esqueci-me da palavra-passe
+          </Link>
+        </div>
 
-      <hr className="mb-4 border-secondary" />
+        <PrimaryButton
+          loading={loading}
+          onClick={handleClick}
+          className="w-full cursor-pointer !rounded-none !px-3 py-3 !text-[17px] font-semibold !tracking-normal sm:py-4 sm:!text-[19px]"
+        >
+          Login
+        </PrimaryButton>
+      </div>
 
-      <Link href="/signup" className="text-sm text-black">
-        Ainda não tens uma conta?
-      </Link>
+      <div className="mt-6 w-full">
+        <div className="mb-3 text-center text-sm text-gray-400">
+          Ainda não tens uma conta?
+        </div>
+        <PrimaryButton
+          className="w-full cursor-pointer !rounded-none !px-3 py-3 !text-[17px] font-semibold !tracking-normal sm:py-4 sm:!text-[19px]"
+          onClick={() => router.push("/signup")}
+        >
+          Criar uma conta
+        </PrimaryButton>
+      </div>
     </section>
+  );
+
+  return (
+    <>
+      <div className="relative min-h-screen px-4 md:hidden">
+        <div
+          className="absolute inset-x-0 top-0"
+          style={{ bottom: "clamp(0.5rem, 6vh, 2.5rem)" }}
+        >
+          <div className="mx-auto flex h-full max-w-[420px] flex-col justify-between px-2">
+            <div
+              className="flex justify-center pt-6"
+              style={{
+                marginTop: "clamp(54px, 33vh, 270px)",
+                paddingTop: "env(safe-area-inset-top)",
+              }}
+            >
+              <Image
+                src="/assets/images/logo_white.svg"
+                alt="Fallstack"
+                width={220}
+                height={90}
+                priority
+                sizes="(max-width: 640px) 54vw, 320px"
+                style={{
+                  width: "clamp(140px, 48vw, 420px)",
+                  height: "auto",
+                  maxHeight: "32vh",
+                  objectFit: "contain",
+                }}
+              />
+            </div>
+
+            <div className="w-full pb-2">{form}</div>
+          </div>
+        </div>
+      </div>
+
+      <div className="hidden md:block">{form}</div>
+    </>
   );
 };
 
