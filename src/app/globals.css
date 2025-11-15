@@ -80,6 +80,15 @@
       "cv05" 1;
   }
 
+  /* Backwards-compatible aliases: some components/styles reference --primary / --secondary
+     while the theme variables are named --color-primary / --color-secondary. Map them
+     here so legacy classes (and CSS using var(--primary)) keep working. */
+  :root {
+    --primary: var(--color-primary);
+    --secondary: var(--color-secondary);
+    --accent: var(--color-accent);
+  }
+
   @supports (font-variation-settings: normal) {
     :root {
       font-family: InterVariable, sans-serif;
